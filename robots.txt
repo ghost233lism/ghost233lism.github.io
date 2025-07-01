@@ -1,0 +1,23 @@
+# robots.txt for ghost233lism.github.io
+# Jin Modi's Personal Academic Website
+
+# Allow all search engines to crawl all content
+User-agent: *
+Allow: /
+
+# Disallow crawling of certain file types and directories
+Disallow: /css/
+Disallow: /js/
+Disallow: *.css
+Disallow: *.js
+
+# Allow important static files
+Allow: /css/academic-simple.css
+Allow: /js/academic-simple.js
+
+# Sitemap locations
+Sitemap: https://ghost233lism.github.io/sitemap.xml
+Sitemap: https://ghost233lism.github.io/baidusitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1 

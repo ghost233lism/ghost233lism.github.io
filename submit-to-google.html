@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提交网站到 Google 索引</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background: #f8f9fa;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .step {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+        .step h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 10px 10px 10px 0;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .btn.secondary {
+            background: #6c757d;
+        }
+        .btn.secondary:hover {
+            background: #545b62;
+        }
+        .btn.success {
+            background: #28a745;
+        }
+        .btn.success:hover {
+            background: #1e7e34;
+        }
+        .url-list {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            font-family: monospace;
+        }
+        .url-list div {
+            margin: 5px 0;
+            padding: 5px;
+            background: white;
+            border-radius: 4px;
+        }
+        .alert {
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        .alert.info {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            color: #0c5460;
+        }
+        .alert.warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+        }
+        .quick-actions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .action-card {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .action-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .progress {
+            margin: 20px 0;
+        }
+        .progress-bar {
+            background: #e9ecef;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            background: #007bff;
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 提交网站到 Google 索引</h1>
+            <p>让您的网站快速被 Google 发现和索引</p>
+        </div>
+
+        <div class="alert info">
+            <strong>📌 重要提示：</strong>请按照以下步骤顺序操作，确保最佳的索引效果。
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p id="progressText">准备开始...</p>
+        </div>
+
+        <div class="step">
+            <h3>第一步：验证网站准备状态 ✅</h3>
+            <p>首先检查您的网站是否已完成基本的SEO配置：</p>
+            <a href="check-google-readiness.html" class="btn" target="_blank">检查网站准备状态</a>
+            <button onclick="completeStep(1)" class="btn secondary">已完成检查</button>
+        </div>
+
+        <div class="step" id="step2" style="opacity: 0.5;">
+            <h3>第二步：设置 Google Search Console 🔧</h3>
+            <p>这是最重要的步骤，Google Search Console 是管理网站索引的官方工具。</p>
+            
+            <div class="alert warning">
+                <strong>⚠️ 注意：</strong>需要 Google 账户才能使用 Search Console
+            </div>
+
+            <ol>
+                <li>点击下方按钮打开 Google Search Console</li>
+                <li>点击"添加资源" → 选择"网址前缀"</li>
+                <li>输入您的网站地址：<code>https://ghost233lism.github.io</code></li>
+                <li>选择验证方法（推荐使用HTML标签方法）</li>
+                <li>复制验证代码并更新到网站的 <code>&lt;head&gt;</code> 部分</li>
+            </ol>
+
+            <a href="https://search.google.com/search-console/" target="_blank" class="btn">
+                打开 Google Search Console
+            </a>
+            <button onclick="completeStep(2)" class="btn secondary">已完成设置</button>
+        </div>
+
+        <div class="step" id="step3" style="opacity: 0.5;">
+            <h3>第三步：提交网站地图 🗺️</h3>
+            <p>告诉 Google 您网站的所有页面位置：</p>
+
+            <div class="url-list">
+                <div>https://ghost233lism.github.io/sitemap.xml</div>
+                <div>https://ghost233lism.github.io/baidusitemap.xml</div>
+            </div>
+
+            <ol>
+                <li>在 Search Console 中找到"站点地图"选项</li>
+                <li>点击"添加新的站点地图"</li>
+                <li>输入：<code>sitemap.xml</code></li>
+                <li>点击"提交"</li>
+            </ol>
+
+            <button onclick="completeStep(3)" class="btn secondary">已提交站点地图</button>
+        </div>
+
+        <div class="step" id="step4" style="opacity: 0.5;">
+            <h3>第四步：请求索引重要页面 🔍</h3>
+            <p>手动请求 Google 立即索引您的重要页面：</p>
+
+            <div class="url-list">
+                <div>https://ghost233lism.github.io/</div>
+                <div>https://ghost233lism.github.io/mathematical-modeling.html</div>
+                <div>https://ghost233lism.github.io/my-company.html</div>
+            </div>
+
+            <ol>
+                <li>在 Search Console 顶部的搜索框中输入页面URL</li>
+                <li>点击"测试实际URL"</li>
+                <li>如果页面可访问，点击"请求编入索引"</li>
+                <li>对每个重要页面重复此过程</li>
+            </ol>
+
+            <button onclick="completeStep(4)" class="btn secondary">已请求索引</button>
+        </div>
+
+        <div class="step" id="step5" style="opacity: 0.5;">
+            <h3>第五步：设置Google Analytics (可选) 📊</h3>
+            <p>跟踪网站访问数据，了解索引效果：</p>
+
+            <a href="https://analytics.google.com/" target="_blank" class="btn">
+                设置 Google Analytics
+            </a>
+            <button onclick="completeStep(5)" class="btn secondary">已设置或跳过</button>
+        </div>
+
+        <div class="step" id="step6" style="opacity: 0.5;">
+            <h3>第六步：验证索引状态 🎯</h3>
+            <p>检查您的网站是否已被成功索引：</p>
+
+            <div class="quick-actions">
+                <div class="action-card">
+                    <h4>直接搜索</h4>
+                    <a href="https://www.google.com/search?q=site:ghost233lism.github.io" target="_blank" class="btn">
+                        检查索引状态
+                    </a>
+                </div>
+                <div class="action-card">
+                    <h4>搜索个人信息</h4>
+                    <a href="https://www.google.com/search?q=%22Jin+Modi%22+Nankai+University" target="_blank" class="btn">
+                        搜索个人信息
+                    </a>
+                </div>
+                <div class="action-card">
+                    <h4>页面速度测试</h4>
+                    <a href="https://developers.google.com/speed/pagespeed/insights/?url=https://ghost233lism.github.io" target="_blank" class="btn">
+                        测试页面速度
+                    </a>
+                </div>
+            </div>
+
+            <button onclick="completeStep(6)" class="btn success">完成所有步骤！</button>
+        </div>
+
+        <div id="completion" style="display: none;">
+            <div class="alert info">
+                <h3>🎉 恭喜！您已完成所有索引提交步骤</h3>
+                <p><strong>预期时间线：</strong></p>
+                <ul>
+                    <li>24-48小时：Google 开始发现您的网站</li>
+                    <li>3-7天：主要页面被索引</li>
+                    <li>2-4周：出现在搜索结果中</li>
+                    <li>2-3个月：搜索排名逐步提升</li>
+                </ul>
+                
+                <p><strong>持续优化建议：</strong></p>
+                <ul>
+                    <li>定期更新网站内容</li>
+                    <li>监控 Search Console 中的性能报告</li>
+                    <li>获得更多外部链接</li>
+                    <li>保持网站技术健康</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="alert warning">
+            <strong>💡 专业提示：</strong>SEO 是一个持续的过程。除了技术优化，最重要的是创造有价值、原创的内容。专注于分享您的学术成果和研究进展，这将自然地吸引更多访问者和搜索引擎的关注。
+        </div>
+    </div>
+
+    <script>
+        let completedSteps = 0;
+        const totalSteps = 6;
+
+        function completeStep(stepNumber) {
+            // 标记当前步骤为完成
+            const currentStep = document.getElementById(`step${stepNumber}`);
+            if (currentStep) {
+                currentStep.style.opacity = '1';
+                currentStep.style.background = '#f0f9f0';
+                currentStep.style.borderLeftColor = '#28a745';
+            }
+
+            // 启用下一步
+            const nextStep = document.getElementById(`step${stepNumber + 1}`);
+            if (nextStep) {
+                nextStep.style.opacity = '1';
+            }
+
+            // 更新进度
+            completedSteps = Math.max(completedSteps, stepNumber);
+            updateProgress();
+
+            // 如果完成所有步骤
+            if (stepNumber === totalSteps) {
+                document.getElementById('completion').style.display = 'block';
+                document.getElementById('completion').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function updateProgress() {
+            const progress = (completedSteps / totalSteps) * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+            document.getElementById('progressText').textContent = 
+                `已完成 ${completedSteps}/${totalSteps} 步 (${Math.round(progress)}%)`;
+        }
+
+        // 初始化：启用第一步
+        document.getElementById('step1').style.opacity = '1';
+    </script>
+</body>
+</html> 

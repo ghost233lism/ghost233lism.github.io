@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="no-js">
+<head>
+    <script>
+        document.documentElement.classList.remove('no-js');
+        // Apply language settings immediately before rendering
+        (function() {
+            const savedLang = localStorage.getItem('language') || 'zh';
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-lang', savedLang);
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            document.documentElement.lang = savedLang === 'en' ? 'en-US' : 'zh-CN';
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数学建模 | Jin Modi</title>
+    <meta name="description" content="Jin Modi - Mathematical Modeling Achievements and Activities">
+    <meta name="author" content="Jin Modi">
+    <link rel="icon" href="./img/favicon.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/academic-simple.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <h1 class="site-title">
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
+                        <span data-en="Jin Modi" data-zh="金莫迪">金莫迪</span>
+                    </a>
+                </h1>
+                
+                <div class="nav-controls">
+                    <div class="nav-menu">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span data-en="Home" data-zh="首页">首页</span>
+                        </a>
+                        <a href="mathematical-modeling.html" class="nav-link active">
+                            <i class="fas fa-calculator"></i>
+                            <span data-en="Mathematical Modeling" data-zh="数学建模">数学建模</span>
+                        </a>
+                        <a href="my-company.html" class="nav-link">
+                            <i class="fas fa-building"></i>
+                            <span data-en="My Company" data-zh="我的公司">我的公司</span>
+                        </a>
+                    </div>
+                    <div class="control-buttons">
+                        <button class="control-btn" id="theme-toggle" title="Toggle Theme">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <button class="control-btn" id="lang-toggle" title="切换语言">
+                            <span class="lang-text">EN</span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Page Header -->
+            <section class="page-header">
+                <div class="page-title-content">
+                    <h1 class="page-title" data-en="Mathematical Modeling" data-zh="数学建模">数学建模</h1>
+                    <p class="page-subtitle" data-en="Achievements, Research, and Leadership in Mathematical Modeling" 
+                       data-zh="数学建模的成就、研究与领导力">
+                        数学建模的成就、研究与领导力
+                    </p>
+                </div>
+                <div class="page-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+            </section>
+
+            <!-- Achievements Section -->
+            <section class="achievements">
+                <h2 class="section-title" data-en="Major Achievements" data-zh="主要成就">主要成就</h2>
+                
+                <div class="achievement-item highlight">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title" data-en="MCM 2025 Finalist Award" 
+                            data-zh="MCM 2025 Finalist奖（特等提名奖）">
+                            MCM 2025 Finalist奖（特等提名奖）
+                        </h3>
+                        <p class="achievement-role" data-en="Team Leader" data-zh="队长">队长</p>
+                        <p class="achievement-description" data-en="Mathematical Contest in Modeling 2025 - Achieved Finalist award (top 2% of all teams worldwide)" 
+                           data-zh="美国大学生数学建模竞赛2025 - 获得Finalist奖（特等提名奖，获奖比例小于2%）">
+                            美国大学生数学建模竞赛2025 - 获得Finalist奖（特等提名奖，获奖比例小于2%）
+                        </p>
+                        <div class="achievement-year">2025</div>
+                    </div>
+                </div>
+
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title" data-en="Shenzhen Cup National Third Prize" 
+                            data-zh="深圳杯数学建模挑战赛全国三等奖">
+                            深圳杯数学建模挑战赛全国三等奖
+                        </h3>
+                        <p class="achievement-description" data-en="Shenzhen Cup Mathematical Modeling Challenge - National Third Prize (less than 1% award rate, only three teams selected per problem each year)" 
+                           data-zh="深圳杯数学建模挑战赛 - 全国三等奖（获奖比例小于1%，每年每道题评选三支队伍）">
+                            深圳杯数学建模挑战赛 - 全国三等奖（获奖比例小于1%，每年每道题评选三支队伍）
+                        </p>
+                        <div class="achievement-year">2024</div>
+                    </div>
+                </div>
+
+                <div class="achievement-item highlight">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title" data-en="IMMC 2022 Double Finalist Award" 
+                            data-zh="IMMC2022双料Finalist奖">
+                            IMMC2022双料Finalist奖
+                        </h3>
+                        <p class="achievement-role" data-en="Team Leader" data-zh="队长">队长</p>
+                        <p class="achievement-description" data-en="International Mathematical Modeling Challenge 2022 - Achieved Finalist awards in both autumn and international competitions, selected for international defense presentation (top 20 teams nationwide)" 
+                           data-zh="国际数学建模挑战赛2022 - 获得秋季赛和国际赛的双料Finalist奖并入选国际赛答辩名单（全国前20组）">
+                            国际数学建模挑战赛2022 - 获得秋季赛和国际赛的双料Finalist奖并入选国际赛答辩名单（全国前20组）
+                        </p>
+                        <div class="achievement-year">2022</div>
+                    </div>
+                </div>
+
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title" data-en="National First Prize in Mathematical Modeling" 
+                            data-zh="全国高中数学建模能力展示活动论文比赛全国一等奖">
+                            全国高中数学建模能力展示活动论文比赛全国一等奖
+                        </h3>
+                        <p class="achievement-description" data-en="Published in national educational journal 'High School Mathematics, Physics and Chemistry' under guidance of Prof. Liu Laifu (Beijing Normal University)" 
+                           data-zh="在北京师范大学刘来福教授指导下发表于国家级教育类期刊《高中数理化》">
+                            在北京师范大学刘来福教授指导下发表于国家级教育类期刊《高中数理化》
+                        </p>
+                        <div class="achievement-year">2021</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Leadership Positions -->
+            <section class="leadership">
+                <h2 class="section-title" data-en="Service" data-zh="服务经历">服务经历</h2>
+                
+                <div class="leadership-timeline">
+                    <div class="timeline-item current">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title" data-en="Nankai University Mathematical Modeling Federation" data-zh="南开大学数学建模协会">
+                                南开大学数学建模协会
+                            </h3>
+                            <div class="timeline-roles">
+                                <span class="role-tag" data-en="First Vice President (Presiding)" data-zh="第一副主席（主持本科生工作）">第一副主席（主持本科生工作）</span>
+                                <span class="role-tag" data-en="Secretary of Youth League Branch" data-zh="团支部书记">团支部书记</span>
+                            </div>
+                            <div class="timeline-period">2024 - <span data-en="Present" data-zh="至今">至今</span></div>
+                            <p class="timeline-description" data-en="Presiding over undergraduate activities, coordinating with primary and secondary schools, and liaising with university representative teams." 
+                               data-zh="主持协会本科生工作，联络中小学工作，联络校代表队。">
+                                主持协会本科生工作，联络中小学工作，联络校代表队。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item current">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title" data-en="Nankai University Mathematical Modeling Team" data-zh="南开大学数学建模代表队">
+                                南开大学数学建模代表队
+                            </h3>
+                            <div class="timeline-roles">
+                                <span class="role-tag" data-en="Team Captain" data-zh="队长">队长</span>
+                            </div>
+                            <div class="timeline-period">2024 - <span data-en="Present" data-zh="至今">至今</span></div>
+                            <p class="timeline-description" data-en="Responsible for the overall work of the university representative team." 
+                               data-zh="主持校代表队全面工作。">
+                                主持校代表队全面工作。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title" data-en="Liaoning Shiyan High School Mathematical Modeling Team" data-zh="辽宁省实验中学数学建模队">
+                                辽宁省实验中学数学建模队
+                            </h3>
+                            <div class="timeline-roles">
+                                <span class="role-tag founder" data-en="Founder & Team Captain" data-zh="创始人&队长">创始人&队长</span>
+                            </div>
+                            <div class="timeline-period">2020 - 2022</div>
+                            <p class="timeline-description" data-en="Founded the school's first mathematical modeling team and led it to achieve outstanding results in national competitions." 
+                               data-zh="创立学校首个数学建模队并带领团队在全国竞赛中取得优异成绩。">
+                                创立学校首个数学建模队并带领团队在全国竞赛中取得优异成绩。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills & Expertise
+            <section class="skills">
+                <h2 class="section-title" data-en="Skills & Expertise" data-zh="技能与专长">技能与专长</h2>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3 class="skill-category-title" data-en="Mathematical Tools" data-zh="数学工具">数学工具</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MATLAB</span>
+                            <span class="skill-tag">Mathematica</span>
+                            <span class="skill-tag">R</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">SPSS</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3 class="skill-category-title" data-en="Modeling Methods" data-zh="建模方法">建模方法</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag" data-en="Optimization Models" data-zh="优化模型">优化模型</span>
+                            <span class="skill-tag" data-en="Statistical Analysis" data-zh="统计分析">统计分析</span>
+                            <span class="skill-tag" data-en="Machine Learning" data-zh="机器学习">机器学习</span>
+                            <span class="skill-tag" data-en="Graph Theory" data-zh="图论">图论</span>
+                            <span class="skill-tag" data-en="Game Theory" data-zh="博弈论">博弈论</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3 class="skill-category-title" data-en="Leadership Skills" data-zh="领导技能">领导技能</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag" data-en="Team Management" data-zh="团队管理">团队管理</span>
+                            <span class="skill-tag" data-en="Training & Mentoring" data-zh="培训指导">培训指导</span>
+                            <span class="skill-tag" data-en="Competition Strategy" data-zh="竞赛策略">竞赛策略</span>
+                            <span class="skill-tag" data-en="Public Speaking" data-zh="公众演讲">公众演讲</span>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+            <!-- Future Plans
+            <section class="future-plans">
+                <h2 class="section-title" data-en="Future Plans" data-zh="未来规划">未来规划</h2>
+                
+                <div class="plans-grid">
+                    <div class="plan-item">
+                        <div class="plan-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="plan-title" data-en="Academic Research" data-zh="学术研究">学术研究</h3>
+                        <p class="plan-description" data-en="Continue research in applied mathematics and mathematical modeling, aiming to publish papers in top-tier journals." 
+                           data-zh="继续应用数学和数学建模研究，目标在顶级期刊发表论文。">
+                            继续应用数学和数学建模研究，目标在顶级期刊发表论文。
+                        </p>
+                    </div>
+                    
+                    <div class="plan-item">
+                        <div class="plan-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="plan-title" data-en="Team Development" data-zh="团队发展">团队发展</h3>
+                        <p class="plan-description" data-en="Expand the mathematical modeling association and train more students to achieve excellent results in national competitions." 
+                           data-zh="扩大数学建模协会规模，培训更多学生在全国竞赛中取得优异成绩。">
+                            扩大数学建模协会规模，培训更多学生在全国竞赛中取得优异成绩。
+                        </p>
+                    </div>
+                    
+                    <div class="plan-item">
+                        <div class="plan-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="plan-title" data-en="International Collaboration" data-zh="国际合作">国际合作</h3>
+                        <p class="plan-description" data-en="Participate in international mathematical modeling competitions and establish collaborations with overseas institutions." 
+                           data-zh="参与国际数学建模竞赛，与海外机构建立合作关系。">
+                            参与国际数学建模竞赛，与海外机构建立合作关系。
+                        </p>
+                    </div>
+                </div>
+            </section> -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Jin Modi. All rights reserved.<span data-en="You are visitor No." data-zh="您是第">您是第</span><span id="visit-count">0</span><span data-en="th visitor" data-zh="个访问者">个访问者</span></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/academic-simple.js"></script>
+</body>
+</html> 

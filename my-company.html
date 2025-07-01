@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="no-js">
+<head>
+    <script>
+        document.documentElement.classList.remove('no-js');
+        // Apply language settings immediately before rendering
+        (function() {
+            const savedLang = localStorage.getItem('language') || 'zh';
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-lang', savedLang);
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            document.documentElement.lang = savedLang === 'en' ? 'en-US' : 'zh-CN';
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的公司 | Jin Modi</title>
+    <meta name="description" content="Jin Modi - Education Technology Company and Entrepreneurship">
+    <meta name="author" content="Jin Modi">
+    <link rel="icon" href="./img/favicon.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/academic-simple.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <h1 class="site-title">
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
+                        <span data-en="Jin Modi" data-zh="金莫迪">金莫迪</span>
+                    </a>
+                </h1>
+                
+                <div class="nav-controls">
+                    <div class="nav-menu">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span data-en="Home" data-zh="首页">首页</span>
+                        </a>
+                        <a href="mathematical-modeling.html" class="nav-link">
+                            <i class="fas fa-calculator"></i>
+                            <span data-en="Mathematical Modeling" data-zh="数学建模">数学建模</span>
+                        </a>
+                        <a href="my-company.html" class="nav-link active">
+                            <i class="fas fa-building"></i>
+                            <span data-en="My Company" data-zh="我的公司">我的公司</span>
+                        </a>
+                    </div>
+                    <div class="control-buttons">
+                        <button class="control-btn" id="theme-toggle" title="Toggle Theme">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <button class="control-btn" id="lang-toggle" title="切换语言">
+                            <span class="lang-text">EN</span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Page Header -->
+            <section class="page-header">
+                <div class="page-title-content">
+                    <h1 class="page-title" data-en="My Company" data-zh="我的公司">我的公司</h1>
+                    <p class="page-subtitle" data-en="Shenyang Optimal Solution Education Technology Co., Ltd." 
+                       data-zh="沈阳最优解教育科技有限公司">
+                        沈阳最优解教育科技有限公司
+                    </p>
+                </div>
+                <div class="page-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+            </section>
+
+            <!-- Company Overview -->
+            <section class="company-overview">
+                <h2 class="section-title" data-en="Company Overview" data-zh="公司概况">公司概况</h2>
+                
+                <div class="company-card">
+                    <div class="company-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="company-info">
+                        <h3 class="company-name" data-en="Shenyang Optimal Solution Education Technology Co., Ltd." 
+                            data-zh="沈阳最优解教育科技有限公司">
+                            沈阳最优解教育科技有限公司
+                        </h3>
+                        <div class="company-role">
+                            <span class="role-badge founder" data-en="Founder & Executive Director" data-zh="创始人&执行董事">创始人&执行董事</span>
+                        </div>
+                        <div class="company-period">2024 - <span data-en="Present" data-zh="至今">至今</span></div>
+                        <p class="company-description" data-en="A technology-driven education company focused on innovative educational solutions and AI Agent driven one-stop social platform." 
+                           data-zh="一家以技术驱动的教育公司，专注于创新教育解决方案和AI Agent驱动的一站式社交平台。">
+                            一家以技术驱动的教育公司，专注于创新教育解决方案和AI Agent驱动的一站式社交平台。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Business Areas -->
+            <section class="business-areas">
+                <h2 class="section-title" data-en="Business Areas" data-zh="业务领域">业务领域</h2>
+                
+                <div class="business-grid">
+                    <div class="business-item">
+                        <div class="business-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3 class="business-title" data-en="Mathematical Modeling Training" data-zh=" ">数学建模培训</h3>
+                        <p class="business-description" data-en="Comprehensive training programs for mathematical modeling competitions, including CUMCM, IMMC, and other national and international contests." 
+                           data-zh="为数学建模竞赛提供全面培训项目，包括全国大学生数学建模竞赛、IMMC等国内外比赛。">
+                            为数学建模竞赛提供全面培训项目，包括全国大学生数学建模竞赛、IMMC等国内外比赛。
+                        </p>
+                        <div class="business-features">
+                            <span class="feature-tag" data-en="Competition Strategy" data-zh="竞赛策略">竞赛策略</span>
+                            <span class="feature-tag" data-en="Algorithm Training" data-zh="算法训练">算法训练</span>
+                            <span class="feature-tag" data-en="Paper Writing" data-zh="论文写作">论文写作</span>
+                        </div>
+                    </div>
+
+                    <div class="business-item">
+                        <div class="business-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3 class="business-title" data-en="Educational Technology" data-zh="教育技术">教育技术</h3>
+                        <p class="business-description" data-en="Development of innovative educational software and platforms to enhance learning experience and improve educational efficiency." 
+                           data-zh="开发创新的教育软件和平台，提升学习体验，改善教育效率。">
+                            开发创新的教育软件和平台，提升学习体验，改善教育效率。
+                        </p>
+                        <div class="business-features">
+                            <span class="feature-tag" data-en="Online Learning" data-zh="在线学习">在线学习</span>
+                            <span class="feature-tag" data-en="AI Teaching" data-zh="AI教学">AI教学</span>
+                            <span class="feature-tag" data-en="Data Analytics" data-zh="数据分析">数据分析</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Company Milestones -->
+            <section class="milestones">
+                <h2 class="section-title" data-en="Company Milestones" data-zh="公司里程碑">公司里程碑</h2>
+                
+                <div class="milestone-timeline">
+                    <div class="milestone-item">
+                        <div class="milestone-date">2024/02</div>
+                        <div class="milestone-content">
+                            <h3 class="milestone-title" data-en="Company Foundation" data-zh="公司成立">公司成立</h3>
+                            <p class="milestone-description" data-en="Founded the education technology company with a vision to revolutionize mathematical education." 
+                               data-zh="沈阳最优解教育科技有限公司成立。成员分别来自北京大学，哈尔滨工业大学，武汉大学和南开大学。">
+                                沈阳最优解教育科技有限公司成立。成员分别来自北京大学，哈尔滨工业大学，武汉大学和南开大学。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="milestone-item current">
+                        <div class="milestone-date">2025/01</div>
+                        <div class="milestone-content">
+                            <h3 class="milestone-title" data-en="Growth Phase" data-zh="成长阶段">成长阶段</h3>
+                            <p class="milestone-description" data-en="Currently expanding our service offerings and exploring international market opportunities." 
+                               data-zh="目前正在扩展我们的服务范围并探索国际市场机会。">
+                                目前正在扩展我们的服务范围并探索国际市场机会。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Jin Modi. All rights reserved.<span data-en="You are visitor No." data-zh="您是第">您是第</span><span id="visit-count">0</span><span data-en="th visitor" data-zh="个访问者">个访问者</span></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/academic-simple.js"></script>
+</body>
+</html> 

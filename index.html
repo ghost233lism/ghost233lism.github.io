@@ -1,15 +1,269 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>金莫迪的个人主页</title><meta name="author" content="Jin Modi"><link rel="shortcut icon" href="/img/favicon.png"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="金莫迪的个人主页" type="application/atom+xml">
-</head><body><header id="page_header"><div class="header_wrap"><div id="blog_name"><a class="blog_title" id="site-name" href="/">金莫迪的个人主页</a></div><button class="menus_icon"><div class="navicon"></div></button><ul class="menus_items"><li class="menus_item"><a class="site-page" href="/Mathematical-Modelling"> Mathematical-Modelling</a></li><li class="menus_item"><a class="site-page" href="/My-company"> My-company</a></li></ul></div></header><main id="page_main"><div class="side-card sticky"><div class="card-wrap" itemscope itemtype="http://schema.org/Person"><div class="author-avatar"><img class="avatar-img" src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/profile.png'" alt="avatar"></div><div class="author-discrip"><h3>Jin Modi</h3><p class="author-bio">南开大学计算机方向大二本科生，VCIP实验室实习，导师：侯淇彬副教授，感兴趣的研究方向：计算机视觉、半监督学习，深度估计及其下游任务。数学建模爱好者，现任南开大学数学建模主要负责人。Second-year undergraduate student in CS at Nankai University, internship at VCIP Laboratory superadvised by Asso. Prof Hou Qibin. Research interests: computer vision, Semi-Supervised learning，RGBD missions.</p></div><div class="author-links"><button class="btn m-social-links">Links</button><ul class="social-icons"><li><a class="social-icon" href="/https://github.com/ghost233lism" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a></li><li><a class="social-icon" href="/img/weixin.jpg" target="_blank"><i class="fab fa-weixin" aria-hidden="true"></i></a></li><li><a class="social-icon" href="/img/qq.jpg" target="_blank"><i class="fab fa-qq" aria-hidden="true"></i></a></li><li><a class="social-icon" href="/2312578@nankai.mail.edu.cn" target="_blank"><i class="fas fa-envelope" aria-hidden="true"></i></a></li></ul><ul class="social-links"><li><a class="e-social-link" href="/" target="_blank"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span>Google Scholar</span></a></li></ul></div><a class="cv-links" href="/attaches/CV.pdf" target="_blank"><i class="fas fa-file-pdf" aria-hidden="true"><span>My Detail CV.</span></i></a></div></div><div class="page" itemscope itemtype="http://schema.org/CreativeWork"><article><h2 id="有关学术"><a href="#有关学术" class="headerlink" title="有关学术"></a>有关学术</h2><p>欢迎来到我的个人主页，我是一名就读于南开大学计算机方向的二年级本科生，我在VCIP实验室实习，指导教师：侯淇彬副教授。我感兴趣的研究方向有：计算机视觉、半监督学习、深度估计及其下游任务。</p>
-<p>Welcome to my personal page!I am a second-year undergraduate student in CS at Nankai University, internship at VCIP Laboratory superadvised by Asso. Prof Hou Qibin. Research interests: computer vision,Semi-Supervised learning，RGBD missions. </p>
-<!-- ### Selected Publications
+<!DOCTYPE html>
+<html lang="zh-CN" class="no-js">
+<head>
+    <script>
+        document.documentElement.classList.remove('no-js');
+        // Apply language settings immediately before rendering
+        (function() {
+            const savedLang = localStorage.getItem('language') || 'zh';
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-lang', savedLang);
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            document.documentElement.lang = savedLang === 'en' ? 'en-US' : 'zh-CN';
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jin Modi | 金莫迪</title>
+    <meta name="description" content="Jin Modi - Computer Science Student at Nankai University">
+    <meta name="author" content="Jin Modi">
+    <link rel="icon" href="./img/favicon.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/academic-simple.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <h1 class="site-title">
+                    <span data-en="Jin Modi" data-zh="金莫迪">金莫迪</span>
+                </h1>
+                
+                <div class="nav-controls">
+                    <div class="nav-menu">
+                        <a href="mathematical-modeling.html" class="nav-link">
+                            <i class="fas fa-calculator"></i>
+                            <span data-en="Mathematical Modeling" data-zh="数学建模">数学建模</span>
+                        </a>
+                        <a href="my-company.html" class="nav-link">
+                            <i class="fas fa-building"></i>
+                            <span data-en="My Company" data-zh="我的公司">我的公司</span>
+                        </a>
+                    </div>
+                    <div class="control-buttons">
+                        <button class="control-btn" id="theme-toggle" title="Toggle Theme">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <button class="control-btn" id="lang-toggle" title="切换语言">
+                            <span class="lang-text">EN</span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-More info: [Publications](https://ghost233lism.github.io/Publications) -->
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Profile Section -->
+            <section class="profile">
+                <div class="profile-content">
+                    <div class="profile-text">
+                        <h2 class="profile-subtitle" data-en="Computer Science, Nankai University" data-zh="南开大学，密码和网络空间安全学院">
+                            南开大学，密码和网络空间安全学院
+                        </h2>
+                        
+                        <div class="profile-links">
+                            <a href="mailto:2312578@mail.nankai.edu.cn" class="profile-link">
+                                <span data-en="Email" data-zh="邮箱">邮箱</span>
+                            </a>
+                            <span class="link-separator">/</span>
+                            <a href="https://github.com/ghost233lism" class="profile-link" target="_blank">
+                                <span>GitHub</span>
+                            </a>
+                            <span class="link-separator">/</span>
+                            <a href="./attaches/CV.pdf" class="profile-link" target="_blank">
+                                <span>CV</span>
+                            </a>
+                        </div>
+                        
+                        <div class="profile-description">
+                            <p data-en="Jin Modi (金莫迪) is a second-year undergraduate student in Computer Science at Nankai University, currently interning at the VCIP Laboratory under the supervision of Associate Professor Hou Qibin. His research interests include computer vision, semi-supervised learning, and depth estimation and its downstream tasks." 
+                               data-zh="金莫迪是南开大学密码和网络空间安全学院二年级本科生，目前在VCIP实验室实习，指导教师：侯淇彬副教授。研究兴趣包括计算机视觉，单目深度估计及其下游任务。">
+                                金莫迪是南开大学密码和网络空间安全学院二年级本科生，目前在VCIP实验室实习，指导教师：侯淇彬副教授。研究兴趣包括计算机视觉，单目深度估计及其下游任务。
+                            </p>
+                        </div>
+                        
+                        <!-- <div class="profile-highlight">
+                            <p data-en="Currently seeking research opportunities in Computer Vision, Semi-Supervised Learning, and Mathematical Modeling." 
+                               data-zh="目前寻求在计算机视觉、半监督学习和数学建模方面的研究机会。">
+                                目前寻求在计算机视觉、半监督学习和数学建模方面的研究机会。
+                            </p>
+                        </div> -->
+                    </div>
+                    
+                    <div class="profile-avatar">
+                        <img src="./img/avatar.jpg" alt="Jin Modi" class="avatar-img">
+                    </div>
+                </div>
+            </section>
 
-<h2 id="数学建模"><a href="#数学建模" class="headerlink" title="数学建模"></a>数学建模</h2><p>我是一名数学建模爱好者，自2020年开始接触数学建模，至今已经四年。我是辽宁省实验中学数学建模队创始人、队长，在王清礼博士的指导下，曾获得IMMC2022秋季赛和国际赛的双料Finalist奖并入选国际赛答辩名单（前20组），全国高中数学建模能力展示活动论文比赛全国一等奖，该赛事中我撰写的论文在北京师范大学数学科学学院刘来福教授的指导下发表于国家级教育类期刊《高中数理化》上。</p>
-<p>学习数学建模四年，感悟颇多，深感“一次建模，终身受益”的重要性。</p>
-<p>如果有任何数学建模的相关问题，欢迎email：<a href="mailto:&#50;&#x33;&#x31;&#50;&#x35;&#x37;&#x38;&#64;&#x6d;&#x61;&#105;&#x6c;&#46;&#x6e;&#x61;&#x6e;&#107;&#x61;&#105;&#x2e;&#x65;&#100;&#117;&#x2e;&#x63;&#x6e;">&#50;&#x33;&#x31;&#50;&#x35;&#x37;&#x38;&#64;&#x6d;&#x61;&#105;&#x6c;&#46;&#x6e;&#x61;&#x6e;&#107;&#x61;&#105;&#x2e;&#x65;&#100;&#117;&#x2e;&#x63;&#x6e;</a>或直接添加我的微信！</p>
-<p>我现已担任南开大学数学建模协会第一副主席（主持工作），团支部书记，理事长。南开大学数学建模代表队队长，学生教练组组长。</p>
-<p>More info: <a href="https://ghost233lism.github.io/Mathematical-Modelling">Mathematical Modelling</a></p>
-<h2 id="商业合作"><a href="#商业合作" class="headerlink" title="商业合作"></a>商业合作</h2><p>我是一家教育科技公司的创始人和执行董事，有关商业合作，欢迎email或直接添加我的微信！</p>
-<p>More info: <a href="https://ghost233lism.github.io/My-company">My-Company</a></p>
-</article></div></main><div class="nav-wrap"><div class="nav"><button class="site-nav"><div class="navicon"></div></button><ul class="nav_items"><li class="nav_item"><a class="nav-page" href="/Mathematical-Modelling"> Mathematical-Modelling</a></li><li class="nav_item"><a class="nav-page" href="/My-company"> My-company</a></li></ul></div><div class="cd-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></div></div><footer id="page_footer"><div class="footer_wrap"><div class="copyright">&copy;2024 - 2025 by Jin Modi</div><div class="theme-info">Powered by <a target="_blank" href="https://hexo.io" rel="nofollow noopener">Hexo</a> & <a target="_blank" href="https://github.com/PhosphorW/hexo-theme-academia" rel="nofollow noopener">Academia Theme</a></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery-pjax@latest/jquery.pjax.min.js"></script><script src="/js/main.js"></script></body></html>
+            <!-- Publications & Achievements Section -->
+            <section class="publications">
+                <h2 class="section-title" data-en="Publications" data-zh="论文发表">论文发表</h2>
+                
+                <!-- <div class="publication-item">
+                    <div class="publication-content">
+                        <h3 class="publication-title" data-en="Research Portfolio" 
+                            data-zh="研究作品集">
+                            研究作品集
+                        </h3>
+                        <p class="publication-authors" data-en="Jin Modi" data-zh="金莫迪">金莫迪</p>
+                        <p class="publication-venue" data-en="Computer Vision & Semi-Supervised Learning, 2024" 
+                           data-zh="计算机视觉与半监督学习，2024">
+                            计算机视觉与半监督学习，2024
+                        </p>
+                        <p class="publication-note" data-en="Currently working on research projects in computer vision and semi-supervised learning under supervision of Associate Professor Hou Qibin at VCIP Laboratory" 
+                           data-zh="目前在VCIP实验室侯淇彬副教授指导下进行计算机视觉和半监督学习研究项目">
+                            目前在VCIP实验室侯淇彬副教授指导下进行计算机视觉和半监督学习研究项目
+                        </p>
+                    </div>
+                </div> -->
+            </section>
+
+            <!-- News Section -->
+            <section class="news">
+                <h2 class="section-title" data-en="News" data-zh="最新动态">最新动态</h2>
+                <ul class="news-list">
+                    <li class="news-item">
+                        <span class="news-date">2024/03</span>
+                        <span class="news-content" data-en="Started internship at VCIP Laboratory under supervision of Associate Professor Hou Qibin." 
+                              data-zh="开始在VCIP实验室实习，导师：侯淇彬副教授。">
+                            开始在VCIP实验室实习，导师：侯淇彬副教授。
+                        </span>
+                    </li>
+                    <li class="news-item">
+                        <span class="news-date">2023/10</span>
+                        <span class="news-content" data-en="Started internship at DBIS Laboratory under supervision of Associate Professor Song Chunyao." 
+                              data-zh="进入南开大学DBIS实验室实习，导师：宋春瑶副教授。">
+                            进入南开大学DBIS实验室实习，导师：宋春瑶副教授
+                        </span>
+                    </li>
+                    <li class="news-item">
+                        <span class="news-date">2023/09</span>
+                        <span class="news-content" data-en="Started undergraduate studies in Computer Science at Nankai University." 
+                              data-zh="进入南开大学开始本科阶段学习">
+                            进入南开大学开始本科阶段学习
+                        </span>
+                    </li>
+                </ul>
+            </section>
+
+            
+
+            <!-- Experience Section -->
+            <section class="experience">
+                <h2 class="section-title" data-en="Experience" data-zh="科研经历">科研经历</h2>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <a href="#" class="experience-org" data-en="VCIP Laboratory, Nankai University" data-zh="南开大学VCIP实验室">
+                                南开大学VCIP实验室
+                            </a>
+                            <span class="experience-period">2024/03 - <span data-en="Present" data-zh="至今">至今</span></span>
+                        </div>
+                        <div class="experience-location" data-en="Tianjin, China" data-zh="中国天津">中国天津</div>
+                    </div>
+                    <div class="experience-role" data-en="Research Intern" data-zh="研究实习生">
+                        <strong>研究实习生</strong>
+                    </div>
+                    <div class="experience-description" data-en="Working under the supervision of Associate Professor Hou Qibin on computer vision and semi-supervised learning research, focusing on depth estimation and its downstream applications." 
+                         data-zh="在侯淇彬副教授的指导下进行计算机视觉和半监督学习研究，专注于深度估计及其下游应用。">
+                        在侯淇彬副教授的指导下进行计算机视觉和半监督学习研究，专注于深度估计及其下游应用。
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <a href="#" class="experience-org" data-en="DBIS Laboratory, Nankai University" data-zh="南开大学DBIS实验室">
+                                南开大学DBIS实验室
+                            </a>
+                            <span class="experience-period">2023/10 - <span data-en="2024/03" data-zh="2024/03">2024/03</span></span>
+                        </div>
+                        <div class="experience-location" data-en="Tianjin, China" data-zh="中国天津">中国天津</div>
+                    </div>
+                    <div class="experience-role" data-en="Research Intern" data-zh="研究实习生">
+                        <strong>研究实习生</strong>
+                    </div>
+                    <div class="experience-description" data-en="Working under the supervision of Associate Professor Song Chunyao on computer vision research" 
+                         data-zh="在宋春瑶副教授的指导下进行计算机视觉研究">
+                        在宋春瑶副教授的指导下进行计算机视觉研究
+                    </div>
+                </div>
+
+
+            </section>
+
+
+            <!-- Education Section -->
+            <section class="education">
+                <h2 class="section-title" data-en="Education" data-zh="教育背景">教育背景</h2>
+                
+                <div class="education-item">
+                    <div class="education-header">
+                        <span class="education-degree" data-en="Bachelor of Engineering in Internet of Things Engineering" 
+                              data-zh="物联网工程专业工学学士">
+                            物联网工程专业工学学士
+                        </span>
+                        <span class="education-period">2023/09 - <span data-en="Present" data-zh="至今">至今</span></span>
+                    </div>
+                    <div class="education-school" data-en="Nankai University" data-zh="南开大学">南开大学</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-header">
+                        <span class="education-degree" data-en="High School Diploma" data-zh="高中毕业">高中毕业</span>
+                        <span class="education-period">2020/09 - 2023/08</span>
+                    </div>
+                    <div class="education-school" data-en="Liaoning Experimental High School" data-zh="辽宁省实验中学">辽宁省实验中学</div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="contact">
+                <h2 class="section-title" data-en="Contact" data-zh="联系方式">联系方式</h2>
+                
+                <div class="contact-content">
+                    <p data-en="Feel free to reach out if you have any questions about academic research, mathematical modeling, or business collaboration opportunities. I typically respond within a few days." 
+                       data-zh="如果您对学术研究、数学建模或商业合作有任何问题，欢迎随时联系。我通常会在几天内回复。">
+                        如果您对学术研究、数学建模或商业合作有任何问题，欢迎随时联系。我通常会在几天内回复。
+                    </p>
+                    
+                    <p data-en="I can be contacted directly at jin_modi[AT]mail.nankai.edu.cn" 
+                       data-zh="可直接通过邮箱 jin_modi[AT]mail.nankai.edu.cn 联系我">
+                        可直接通过邮箱 jin_modi[AT]mail.nankai.edu.cn 联系我
+                    </p>
+                    
+                    <div class="contact-social">
+                        <a href="./img/weixin.jpg" target="_blank" data-en="Find me on WeChat" data-zh="微信联系">微信联系</a>
+                        <span class="link-separator">/</span>
+                        <a href="./img/qq.jpg" target="_blank" data-en="Find me on QQ" data-zh="QQ联系">QQ联系</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Jin Modi. All rights reserved. <span data-en="You are visitor No." data-zh="您是第">您是第</span><span id="visit-count">0</span><span data-en="th visitor" data-zh="个访问者">个访问者</span></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/academic-simple.js"></script>
+</body>
+</html>

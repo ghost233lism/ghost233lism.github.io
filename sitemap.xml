@@ -5,7 +5,7 @@
   <!-- Homepage - Highest Priority -->
   <url>
     <loc>https://ghost233lism.github.io/</loc>
-    <lastmod>2025-01-20</lastmod>
+    <lastmod>2025-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://ghost233lism.github.io/" />
@@ -15,7 +15,7 @@
   <!-- Mathematical Modeling Page -->
   <url>
     <loc>https://ghost233lism.github.io/mathematical-modeling.html</loc>
-    <lastmod>2025-01-20</lastmod>
+    <lastmod>2025-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://ghost233lism.github.io/mathematical-modeling.html" />
@@ -25,7 +25,7 @@
   <!-- My Company Page -->
   <url>
     <loc>https://ghost233lism.github.io/my-company.html</loc>
-    <lastmod>2025-01-20</lastmod>
+    <lastmod>2025-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://ghost233lism.github.io/my-company.html" />
@@ -35,7 +35,7 @@
   <!-- Static Resources -->
   <url>
     <loc>https://ghost233lism.github.io/attaches/CV.pdf</loc>
-    <lastmod>2025-01-20</lastmod>
+    <lastmod>2025-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -43,14 +43,14 @@
   <!-- SEO Tools -->
   <url>
     <loc>https://ghost233lism.github.io/check-google-readiness.html</loc>
-    <lastmod>2025-01-20</lastmod>
+    <lastmod>2025-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
     <loc>https://ghost233lism.github.io/submit-to-google.html</loc>
-    <lastmod>2025-01-20</lastmod>
+    <lastmod>2025-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>

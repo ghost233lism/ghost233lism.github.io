@@ -4,28 +4,28 @@
   <!-- 主页 -->
   <url>
     <loc>https://ghost233lism.github.io/</loc>
-    <lastmod>2025-01-20</lastmod>
+    <lastmod>2025-07-01</lastmod>
     <priority>1.0</priority>
   </url>
   
   <!-- 数学建模页面 -->
   <url>
     <loc>https://ghost233lism.github.io/mathematical-modeling.html</loc>
-    <lastmod>2025-01-20</lastmod>
+    <lastmod>2025-07-01</lastmod>
     <priority>0.8</priority>
   </url>
   
   <!-- 我的公司页面 -->
   <url>
     <loc>https://ghost233lism.github.io/my-company.html</loc>
-    <lastmod>2025-01-20</lastmod>
+    <lastmod>2025-07-01</lastmod>
     <priority>0.8</priority>
   </url>
   
   <!-- CV文件 -->
   <url>
     <loc>https://ghost233lism.github.io/attaches/CV.pdf</loc>
-    <lastmod>2025-01-20</lastmod>
+    <lastmod>2025-07-01</lastmod>
     <priority>0.6</priority>
   </url>
 

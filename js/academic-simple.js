@@ -252,7 +252,7 @@ function initVisitCounter() {
 
 // Update language content when DOM is ready (theme and lang attributes already set in head)
 document.addEventListener('DOMContentLoaded', function() {
-    const savedLang = document.documentElement.getAttribute('data-lang') || 'zh';
+    const savedLang = document.documentElement.getAttribute('data-lang') || 'en';
     const savedTheme = document.documentElement.getAttribute('data-theme') || 'light';
     
     // Sync body attributes with html attributes
@@ -299,7 +299,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Get saved settings (already applied above)
     const savedTheme = localStorage.getItem('theme') || 'light';
-    const savedLang = localStorage.getItem('language') || 'zh';
+    const savedLang = localStorage.getItem('language') || 'en';
     
     // Apply theme settings to toggle button
     if (themeToggle) {
@@ -343,7 +343,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Language Toggle Functionality
     if (langToggle) {
         langToggle.addEventListener('click', function() {
-            const currentLang = document.documentElement.getAttribute('data-lang') || 'zh';
+            const currentLang = document.documentElement.getAttribute('data-lang') || 'en';
             const newLang = currentLang === 'zh' ? 'en' : 'zh';
             setLanguage(newLang);
             localStorage.setItem('language', newLang);

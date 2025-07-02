@@ -5,7 +5,7 @@
         document.documentElement.classList.remove('no-js');
         // Apply language settings immediately before rendering
         (function() {
-            const savedLang = localStorage.getItem('language') || 'zh';
+            const savedLang = localStorage.getItem('language') || 'en';
             const savedTheme = localStorage.getItem('theme') || 'light';
             document.documentElement.setAttribute('data-lang', savedLang);
             document.documentElement.setAttribute('data-theme', savedTheme);
@@ -145,10 +145,10 @@
                             <h3 class="company-name" data-en="NKU Wiki" data-zh="NKU Wiki">
                                 NKU Wiki
                             </h3>
-                            <div class="company-role">
+                            <div class="company-role-meta" style="margin-bottom: var(--spacing-md);">
                                 <span class="role-badge" data-en="Educational Platform" data-zh="知识平台">知识平台</span>
                             </div>
-                            <div class="company-period">
+                            <div class="company-period" style="margin-top: var(--spacing-md);">
                                 <a href="http://nkuwiki.com" target="_blank" class="product-link">nkuwiki.com</a>
                             </div>
                             <p class="company-description" data-en="🔓 Open-source transparent technology + 🤝 Community collaborative governance + 🆓 Permanently accessible services" 
@@ -166,10 +166,10 @@
                             <h3 class="company-name" data-en="NKU Meta Wiki" data-zh="nku元智wiki">
                                 nku元智wiki
                             </h3>
-                            <div class="company-role">
+                            <div class="company-role-meta" style="margin-bottom: var(--spacing-md);">
                                 <span class="role-badge" data-en="AI Agent-Powered One-Stop Campus Social Platform" data-zh="AI Agent驱动的一站式校园社交平台">AI Agent驱动的一站式校园社交平台</span>
                             </div>
-                            <div class="company-period">
+                            <div class="company-period" style="margin-top: var(--spacing-md);">
                                 <span data-en="Please search for 'nku元智wiki' in WeChat Mini Programs" data-zh="请到微信小程序搜索“nku元智wiki”使用">请到微信小程序搜索“nku元智wiki”使用</span>
                             </div>
                             <p class="company-description" data-en="An AI Agent-driven intelligent wiki platform that provides personalized campus services and campus knowledge retrieval." 

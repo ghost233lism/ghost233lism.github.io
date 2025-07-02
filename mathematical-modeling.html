@@ -5,7 +5,7 @@
         document.documentElement.classList.remove('no-js');
         // Apply language settings immediately before rendering
         (function() {
-            const savedLang = localStorage.getItem('language') || 'zh';
+            const savedLang = localStorage.getItem('language') || 'en';
             const savedTheme = localStorage.getItem('theme') || 'light';
             document.documentElement.setAttribute('data-lang', savedLang);
             document.documentElement.setAttribute('data-theme', savedTheme);
@@ -128,17 +128,34 @@
                         <div class="achievement-year">2025</div>
                     </div>
                 </div>
+                
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title" data-en="Mathorcup National Second Prize" 
+                            data-zh="Mathorcup国家二等奖">
+                            Mathorcup国家二等奖
+                        </h3>
+                        <p class="achievement-description" data-en="Mathorcup Mathematical Modeling Challenge 2025 - National Second Prize" 
+                           data-zh="Mathorcup高校数学建模挑战赛2025 - 国家二等奖">
+                            Mathorcup高校数学建模挑战赛2025 - 国家二等奖
+                        </p>
+                        <div class="achievement-year">2025</div>
+                    </div>
+                </div>
 
                 <div class="achievement-item">
                     <div class="achievement-icon">
                         <i class="fas fa-award"></i>
                     </div>
                     <div class="achievement-content">
-                        <h3 class="achievement-title" data-en="Shenzhen Cup National Third Prize" 
+                        <h3 class="achievement-title" data-en="ShenZhen Cup National Third Prize" 
                             data-zh="深圳杯数学建模挑战赛全国三等奖">
                             深圳杯数学建模挑战赛全国三等奖
                         </h3>
-                        <p class="achievement-description" data-en="Shenzhen Cup Mathematical Modeling Challenge - National Third Prize (less than 1% award rate, only three teams selected per problem each year)" 
+                        <p class="achievement-description" data-en="ShenZhen Cup Mathematical Modeling Challenge - National Third Prize (less than 1% award rate, only three teams selected per problem each year)" 
                            data-zh="深圳杯数学建模挑战赛 - 全国三等奖（获奖比例小于1%，每年每道题评选三支队伍）">
                             深圳杯数学建模挑战赛 - 全国三等奖（获奖比例小于1%，每年每道题评选三支队伍）
                         </p>

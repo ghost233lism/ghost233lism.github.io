@@ -556,11 +556,20 @@ section {
 }
 
 /* Publications Section - Enhanced */
+.author-notation {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+    text-align: left;
+}
+
 .publication-item {
     margin-bottom: var(--spacing-xl);
     padding: var(--spacing-xl);
     background: var(--bg-secondary);
-    border-radius: 20px;
+    border-radius: 8px;
     transition: all var(--transition);
     position: relative;
     overflow: hidden;
@@ -579,14 +588,7 @@ section {
     opacity: 0.1;
 }
 
-.publication-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px var(--shadow-medium);
-}
 
-.publication-item:hover::before {
-    width: 100%;
-}
 
 .publication-title {
     font-size: 1.2rem;
@@ -606,6 +608,38 @@ section {
     z-index: 1;
 }
 
+.publication-authors a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: all var(--transition);
+    border-radius: 4px;
+    padding: 2px 4px;
+    margin: -2px -4px;
+    position: relative;
+}
+
+.publication-authors a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--accent-light);
+    border-radius: 4px;
+    transition: width var(--transition);
+    z-index: -1;
+}
+
+.publication-authors a:hover {
+    color: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+.publication-authors a:hover::before {
+    width: 100%;
+}
+
 .publication-venue {
     font-style: italic;
     margin-bottom: var(--spacing-sm);
@@ -620,6 +654,112 @@ section {
     line-height: 1.5;
     position: relative;
     z-index: 1;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Enhanced Publication Card Layout */
+.publication-card {
+    display: flex;
+    gap: var(--spacing-xl);
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+}
+
+.publication-media {
+    flex-shrink: 0;
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+}
+
+.publication-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.publication-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.publication-links {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.publication-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: all var(--transition);
+    position: relative;
+    z-index: 2;
+}
+
+.publication-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--accent-light);
+    border-radius: 6px;
+    transition: width var(--transition);
+    z-index: -1;
+}
+
+.publication-link:hover {
+    color: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+.publication-link:hover::before {
+    width: 100%;
+}
+
+/* Responsive adjustments for publication cards */
+@media (max-width: 768px) {
+    .publication-card {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+    
+    .publication-media {
+        width: 100%;
+        height: 200px;
+        align-self: center;
+        max-width: 300px;
+    }
+    
+    .publication-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .publication-media {
+        height: 180px;
+    }
+    
+    .publication-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+    }
+    
+    .publication-link {
+        padding: 6px 12px;
+    }
 }
 
 /* Experience Section - Enhanced */

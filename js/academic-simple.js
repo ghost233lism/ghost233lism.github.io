@@ -49,10 +49,23 @@ function setLanguage(lang) {
     const elements = document.querySelectorAll('[data-en][data-zh]');
     elements.forEach(element => {
         const text = lang === 'en' ? element.getAttribute('data-en') : element.getAttribute('data-zh');
-        if (text) {
+        if (text && text !== 'author-list-en' && text !== 'author-list-zh') {
             element.textContent = text;
         }
     });
+    
+    // Handle author lists specifically
+    const authorListEn = document.querySelector('[data-en="author-list-en"]');
+    const authorListZh = document.querySelector('.author-list-zh');
+    if (authorListEn && authorListZh) {
+        if (lang === 'en') {
+            authorListEn.style.display = '';
+            authorListZh.style.display = 'none';
+        } else {
+            authorListEn.style.display = 'none';
+            authorListZh.style.display = '';
+        }
+    }
     
     // Update document language
     document.documentElement.lang = lang === 'en' ? 'en-US' : 'zh-CN';
@@ -263,10 +276,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const elements = document.querySelectorAll('[data-en][data-zh]');
     elements.forEach(element => {
         const text = savedLang === 'en' ? element.getAttribute('data-en') : element.getAttribute('data-zh');
-        if (text) {
+        if (text && text !== 'author-list-en' && text !== 'author-list-zh') {
             element.textContent = text;
         }
     });
+    
+    // Handle author lists specifically
+    const authorListEn = document.querySelector('[data-en="author-list-en"]');
+    const authorListZh = document.querySelector('.author-list-zh');
+    if (authorListEn && authorListZh) {
+        if (savedLang === 'en') {
+            authorListEn.style.display = '';
+            authorListZh.style.display = 'none';
+        } else {
+            authorListEn.style.display = 'none';
+            authorListZh.style.display = '';
+        }
+    }
     
     // Update title based on current page
     const currentPage = window.location.pathname;

@@ -661,12 +661,64 @@ section {
     width: 100%;
 }
 
+/* Publication venue and GitHub stats container */
+.publication-venue-container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
 .publication-venue {
     font-style: italic;
-    margin-bottom: var(--spacing-sm);
     color: var(--text-secondary);
     position: relative;
     z-index: 1;
+    margin: 0;
+}
+
+/* GitHub Stats */
+.github-stats {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.github-stat {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition);
+}
+
+.github-stat:hover {
+    background: var(--accent-light);
+    border-color: var(--accent-color);
+    transform: translateY(-1px);
+}
+
+.github-stat i {
+    font-size: 0.9rem;
+    color: var(--accent-color);
+}
+
+.stat-value {
+    font-weight: 600;
+    color: var(--text-primary);
+    min-width: 20px;
+    text-align: center;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
 }
 
 .publication-note {
@@ -780,6 +832,25 @@ section {
     
     .publication-link {
         padding: 6px 12px;
+    }
+    
+    .publication-venue-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+    }
+    
+    .github-stats {
+        gap: var(--spacing-sm);
+    }
+    
+    .github-stat {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+    
+    .stat-label {
+        display: none;
     }
 }
 

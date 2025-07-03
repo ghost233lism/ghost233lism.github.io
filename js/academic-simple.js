@@ -398,6 +398,9 @@ document.addEventListener('DOMContentLoaded', function() {
     addRippleEffect();
     handleVisibilityChange();
     
+    // Initialize GitHub stats
+    initGitHubStats();
+    
     // Keyboard shortcuts
     document.addEventListener('keydown', function(e) {
         // Ctrl/Cmd + D toggles dark mode
@@ -444,10 +447,85 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('⌨️  Keyboard shortcuts: Ctrl/Cmd + D (theme), Ctrl/Cmd + L (language)');
 });
 
+// GitHub Stats Functionality
+async function fetchGitHubStats(repo) {
+    try {
+        const response = await fetch(`https://api.github.com/repos/${repo}`);
+        if (response.ok) {
+            const data = await response.json();
+            return {
+                stars: data.stargazers_count,
+                forks: data.forks_count
+            };
+        } else {
+            console.warn(`Failed to fetch GitHub stats for ${repo}:`, response.status);
+            return null;
+        }
+    } catch (error) {
+        console.error(`Error fetching GitHub stats for ${repo}:`, error);
+        return null;
+    }
+}
+
+function updateGitHubStats(element, stats) {
+    if (!stats) return;
+    
+    const starsElement = element.querySelector('[data-type="stars"]');
+    const forksElement = element.querySelector('[data-type="forks"]');
+    
+    if (starsElement) {
+        // Animate the number counting up
+        animateNumber(starsElement, 0, stats.stars, 1000);
+    }
+    
+    if (forksElement) {
+        // Animate the number counting up
+        animateNumber(forksElement, 0, stats.forks, 1000);
+    }
+}
+
+function animateNumber(element, start, end, duration) {
+    const startTime = performance.now();
+    const diff = end - start;
+    
+    function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // Use easing function for smooth animation
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        const current = Math.floor(start + diff * easeOut);
+        
+        element.textContent = current;
+        
+        if (progress < 1) {
+            requestAnimationFrame(update);
+        } else {
+            element.textContent = end;
+        }
+    }
+    
+    requestAnimationFrame(update);
+}
+
+function initGitHubStats() {
+    const githubStatsElements = document.querySelectorAll('.github-stats[data-repo]');
+    
+    githubStatsElements.forEach(async (element) => {
+        const repo = element.getAttribute('data-repo');
+        if (repo) {
+            const stats = await fetchGitHubStats(repo);
+            updateGitHubStats(element, stats);
+        }
+    });
+}
+
 // Export functions for external use
 window.AcademicPortfolio = {
     setTheme,
     setLanguage,
     addTypingAnimation,
-    enhanceSmoothScroll
+    enhanceSmoothScroll,
+    fetchGitHubStats,
+    initGitHubStats
 }; 

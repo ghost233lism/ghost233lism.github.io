@@ -50,7 +50,12 @@ function setLanguage(lang) {
     elements.forEach(element => {
         const text = lang === 'en' ? element.getAttribute('data-en') : element.getAttribute('data-zh');
         if (text && text !== 'author-list-en' && text !== 'author-list-zh') {
-            element.textContent = text;
+            // Use innerHTML for content that may contain HTML tags, otherwise use textContent
+            if (text.includes('<a ')) {
+                element.innerHTML = text;
+            } else {
+                element.textContent = text;
+            }
         }
     });
     
@@ -277,7 +282,12 @@ document.addEventListener('DOMContentLoaded', function() {
     elements.forEach(element => {
         const text = savedLang === 'en' ? element.getAttribute('data-en') : element.getAttribute('data-zh');
         if (text && text !== 'author-list-en' && text !== 'author-list-zh') {
-            element.textContent = text;
+            // Use innerHTML for content that may contain HTML tags, otherwise use textContent
+            if (text.includes('<a ')) {
+                element.innerHTML = text;
+            } else {
+                element.textContent = text;
+            }
         }
     });
     

@@ -555,6 +555,17 @@ section {
     line-height: 1.6;
 }
 
+.news-content a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.news-content a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
 /* Publications Section - Enhanced */
 .author-notation {
     font-size: 0.9rem;
@@ -598,6 +609,16 @@ section {
     line-height: 1.4;
     position: relative;
     z-index: 1;
+}
+
+.publication-title a {
+    color: var(--text-primary);
+    text-decoration: none;
+    display: block;
+}
+
+.publication-title a:hover {
+    color: var(--accent-color);
 }
 
 .publication-authors {

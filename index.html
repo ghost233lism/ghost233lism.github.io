@@ -55,26 +55,6 @@
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="Uh6sfZzqP4AcERrgiRncQT-vjEwJt33KYxe8x3RTtho">
     
-    <!-- Google Analytics (Replace with your tracking ID when available) -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GA_TRACKING_ID');
-    </script> -->
-    
-    <!-- Additional Google-friendly meta tags -->
-    <meta name="google" content="translate">
-    <meta name="googlebot" content="index,follow,snippet,archive">
-    <meta name="bingbot" content="index,follow,snippet,archive">
-    <meta name="rating" content="General">
-    <meta name="distribution" content="Global">
-    <meta name="language" content="Chinese, English">
-    <meta name="geo.region" content="CN-TJ">
-    <meta name="geo.placename" content="Tianjin, China">
-    <meta name="ICBM" content="39.1042,117.1917">
-    
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -90,18 +70,16 @@
     <header class="header">
         <div class="container">
             <nav class="navbar">
-                <h1 class="site-title">
+                <a href="/" class="site-title">
                     <span data-en="Jin Modi" data-zh="金莫迪">金莫迪</span>
-                </h1>
+                </a>
                 
                 <div class="nav-controls">
                     <div class="nav-menu">
                         <a href="mathematical-modeling.html" class="nav-link">
-                            <i class="fas fa-calculator"></i>
                             <span data-en="Mathematical Modeling" data-zh="数学建模">数学建模</span>
                         </a>
                         <a href="my-company.html" class="nav-link">
-                            <i class="fas fa-building"></i>
                             <span data-en="My Company" data-zh="我的公司">我的公司</span>
                         </a>
                     </div>
@@ -124,10 +102,21 @@
             <!-- Profile Section -->
             <section class="profile">
                 <div class="profile-content">
+                    <div class="profile-avatar">
+                        <img src="./img/avatar.jpg" alt="Jin Modi" class="avatar-img">
+                    </div>
+                    
                     <div class="profile-text">
                         <h2 class="profile-subtitle" data-en="Computer Science, Nankai University" data-zh="南开大学，密码和网络空间安全学院">
                             南开大学，密码和网络空间安全学院
                         </h2>
+                        
+                        <div class="profile-description">
+                            <p data-en="Jin Modi (金莫迪) is a third-year undergraduate student in Computer Science at Nankai University, currently interning at the VCIP Laboratory under the supervision of Associate Professor Hou Qibin. His research interests include computer vision, depth estimation and its downstream tasks and VLM." 
+                               data-zh="金莫迪是南开大学密码和网络空间安全学院三年级本科生，目前在VCIP实验室实习，指导教师：侯淇彬副教授。研究兴趣包括计算机视觉，单目深度估计及其下游任务，和视觉语言模型。">
+                                金莫迪是南开大学密码和网络空间安全学院三年级本科生，目前在VCIP实验室实习，指导教师：侯淇彬副教授。研究兴趣包括计算机视觉，单目深度估计及其下游任务，和视觉语言模型。
+                            </p>
+                        </div>
                         
                         <div class="profile-links">
                             <a href="mailto:2312578@mail.nankai.edu.cn" class="profile-link">
@@ -141,97 +130,26 @@
                             <a href="./attaches/CV.pdf" class="profile-link" target="_blank">
                                 <span>CV</span>
                             </a>
-                        </div>
-                        
-                        <div class="profile-description">
-                            <p data-en="Jin Modi (金莫迪) is a second-year undergraduate student in Computer Science at Nankai University, currently interning at the VCIP Laboratory under the supervision of Associate Professor Hou Qibin. His research interests include computer vision, depth estimation and its downstream tasks." 
-                               data-zh="金莫迪是南开大学密码和网络空间安全学院二年级本科生，目前在VCIP实验室实习，指导教师：侯淇彬副教授。研究兴趣包括计算机视觉，单目深度估计及其下游任务。">
-                                金莫迪是南开大学密码和网络空间安全学院二年级本科生，目前在VCIP实验室实习，指导教师：侯淇彬副教授。研究兴趣包括计算机视觉，单目深度估计及其下游任务。
-                            </p>
-                        </div>
-                        
-                        <!-- <div class="profile-highlight">
-                            <p data-en="Currently seeking research opportunities in Computer Vision, Semi-Supervised Learning, and Mathematical Modeling." 
-                               data-zh="目前寻求在计算机视觉、半监督学习和数学建模方面的研究机会。">
-                                目前寻求在计算机视觉、半监督学习和数学建模方面的研究机会。
-                            </p>
-                        </div> -->
-                    </div>
-                    
-                    <div class="profile-avatar">
-                        <img src="./img/avatar.jpg" alt="Jin Modi" class="avatar-img">
-                    </div>
-                </div>
-            </section>
-
-            <!-- Publications & Achievements Section -->
-            <section class="publications">
-                <h2 class="section-title" data-en="Publications" data-zh="论文发表">论文发表</h2>
-                <p class="author-notation" data-en="* Equal contribution, † Corresponding author" data-zh="* 同等贡献，† 通讯作者">* 同等贡献，† 通讯作者</p>
-                
-                <div class="publication-item">
-                    <div class="publication-card">
-                        <div class="publication-media">
-                            <img src="./img/depthanything-AC-video.gif" alt="Classic Video Denoising Teaser" class="publication-image">
-                        </div>
-                        <div class="publication-content">
-                            <h3 class="publication-title">
-                                <a href="https://arxiv.org/abs/2507.01634" target="_blank" data-en="Depth Anything At Any Condition" 
-                                   data-zh="任何条件下估计任何深度">
-                                    Depth Anything At Any Condition
-                                </a>
-                            </h3>
-                            <p class="publication-authors">
-                                <span data-en="author-list-en" data-zh="author-list-zh">
-                                    <a href="https://bbbbchan.github.io/" target="_blank">Boyuan Sun<sup>*</sup></a>, 
-                                    <a href="https://ghost233lism.github.io/">Modi Jin<sup>*</sup></a>, 
-                                    <a href="https://yinbow.github.io/" target="_blank">Bowen Yin</a>, 
-                                    <a href="https://mmcheng.net/qbhou/" target="_blank">Qibin Hou<sup>†</sup></a>
-                                </span>
-                                <span class="author-list-zh" style="display: none;">
-                                    <a href="https://bbbbchan.github.io/" target="_blank">孙博远<sup>*</sup></a>, 
-                                    <a href="https://ghost233lism.github.io/">金莫迪<sup>*</sup></a>, 
-                                    <a href="https://yinbow.github.io/" target="_blank">尹博文</a>, 
-                                    <a href="https://mmcheng.net/qbhou/" target="_blank">侯淇彬<sup>†</sup></a>
-                                </span>
-                            </p>
-                            <div class="publication-venue-container">
-                                <p class="publication-venue">
-                                    <span data-en="arXiv, 2025" data-zh="arXiv, 2025">arXiv, 2025</span>
-                                </p>
-                                <div class="github-stats" data-repo="HVision-NKU/DepthAnythingAC">
-                                    <span class="github-stat">
-                                        <i class="fab fa-github"></i>
-                                        <span class="stat-value" data-type="stars">-</span>
-                                        <span class="stat-label" data-en="stars" data-zh="星标">星标</span>
-                                    </span>
-                                    <span class="github-stat">
-                                        <i class="fas fa-code-branch"></i>
-                                        <span class="stat-value" data-type="forks">-</span>
-                                        <span class="stat-label" data-en="forks" data-zh="分支">分支</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="publication-links">
-                                <a href="https://github.com/HVision-NKU/DepthAnythingAC" class="publication-link" data-en="code" data-zh="代码">code</a>
-                                <span class="link-separator">/</span>
-                                <a href="https://ghost233lism.github.io/depthanything-AC-page/" class="publication-link" data-en="project" data-zh="项目">project</a>
-                                <span class="link-separator">/</span>
-                                <a href="https://arxiv.org/abs/2507.01634" class="publication-link" data-en="paper" data-zh="论文">paper</a>
-                                <span class="link-separator">/</span>
-                                <a href="#" class="publication-link" data-en="bibtex" data-zh="引用">bibtex</a>
-                            </div>
+                            <span class="link-separator">/</span>
+                            <a href="https://scholar.google.com/citations?user=zZ8XiPkAAAAJ&hl=zh-CN" class="profile-link" target="_blank">
+                                <span>Google Scholar</span>
+                            </a>
                         </div>
                     </div>
                 </div>
-
-                
             </section>
 
             <!-- News Section -->
             <section class="news">
                 <h2 class="section-title" data-en="News" data-zh="最新动态">最新动态</h2>
                 <ul class="news-list">
+                    <li class="news-item">
+                        <span class="news-date">2025/11</span>
+                        <span class="news-content" data-en="Submitted a paper to CVPR." 
+                              data-zh="一篇论文投至CVPR。">
+                            一篇论文投至CVPR。
+                        </span>
+                    </li>
                     <li class="news-item">
                         <span class="news-date">2025/07</span>
                         <span class="news-content" data-en="Submitted a paper to <a href='https://arxiv.org/abs/2507.01634' target='_blank'>arXiv</a>." 
@@ -263,7 +181,60 @@
                 </ul>
             </section>
 
-            
+            <!-- Publications & Achievements Section -->
+            <section class="publications">
+                <h2 class="section-title" data-en="Publications" data-zh="论文发表">论文发表</h2>
+                <p class="author-notation" data-en="* Equal contribution, † Corresponding author" data-zh="* 同等贡献，† 通讯作者">* 同等贡献，† 通讯作者</p>
+                
+                <div class="publication-item">
+                    <div class="publication-media">
+                        <img src="./img/depthanything-AC-video.gif" alt="Depth Anything At Any Condition" class="publication-image">
+                    </div>
+                    <div class="publication-content">
+                        <h3 class="publication-title">
+                            <a href="https://arxiv.org/abs/2507.01634" target="_blank" data-en="Depth Anything At Any Condition" 
+                               data-zh="任何条件下估计任何深度">
+                                Depth Anything At Any Condition
+                            </a>
+                        </h3>
+                        <p class="publication-authors">
+                            <span data-en="author-list-en" data-zh="author-list-zh">
+                                <a href="https://bbbbchan.github.io/" target="_blank">Boyuan Sun<sup>*</sup></a>, 
+                                <a href="https://ghost233lism.github.io/">Modi Jin<sup>*</sup></a>, 
+                                <a href="https://yinbow.github.io/" target="_blank">Bowen Yin</a>, 
+                                <a href="https://mmcheng.net/qbhou/" target="_blank">Qibin Hou<sup>†</sup></a>
+                            </span>
+                            <span class="author-list-zh" style="display: none;">
+                                <a href="https://bbbbchan.github.io/" target="_blank">孙博远<sup>*</sup></a>, 
+                                <a href="https://ghost233lism.github.io/">金莫迪<sup>*</sup></a>, 
+                                <a href="https://yinbow.github.io/" target="_blank">尹博文</a>, 
+                                <a href="https://mmcheng.net/qbhou/" target="_blank">侯淇彬<sup>†</sup></a>
+                            </span>
+                        </p>
+                        <div class="publication-venue-container">
+                            <p class="publication-venue">
+                                <span data-en="arXiv, 2025" data-zh="arXiv, 2025">arXiv, 2025</span>
+                            </p>
+                            <div class="github-stats" data-repo="HVision-NKU/DepthAnythingAC">
+                                <span class="github-stat">
+                                    <i class="fab fa-github"></i>
+                                    <span class="stat-value" data-type="stars">-</span>
+                                </span>
+                                <span class="github-stat">
+                                    <i class="fas fa-code-branch"></i>
+                                    <span class="stat-value" data-type="forks">-</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="publication-links">
+                            <a href="https://arxiv.org/abs/2507.01634" class="publication-link" data-en="[Paper]" data-zh="[论文]">[Paper]</a>
+                            <a href="https://github.com/HVision-NKU/DepthAnythingAC" class="publication-link" data-en="[Code]" data-zh="[代码]">[Code]</a>
+                            <a href="https://ghost233lism.github.io/depthanything-AC-page/" class="publication-link" data-en="[Project]" data-zh="[项目]">[Project]</a>
+                            <!-- <a href="#" class="publication-link" data-en="[BibTeX]" data-zh="[引用]">[BibTeX]</a> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <!-- Experience Section -->
             <section class="experience">
@@ -271,45 +242,36 @@
                 
                 <div class="experience-item">
                     <div class="experience-header">
-                        <div class="experience-title">
-                            <a href="#" class="experience-org" data-en="VCIP Laboratory, Nankai University" data-zh="南开大学VCIP实验室">
-                                南开大学VCIP实验室
-                            </a>
-                            <span class="experience-period">2024/03 - <span data-en="Present" data-zh="至今">至今</span></span>
-                        </div>
-                        <div class="experience-location" data-en="Tianjin, China" data-zh="中国天津">中国天津</div>
+                        <a href="#" class="experience-org" data-en="VCIP Laboratory, Nankai University" data-zh="南开大学VCIP实验室">
+                            南开大学VCIP实验室
+                        </a>
+                        <span class="experience-period">2024/03 - <span data-en="Present" data-zh="至今">至今</span></span>
                     </div>
                     <div class="experience-role" data-en="Research Intern" data-zh="研究实习生">
-                        <strong>研究实习生</strong>
+                        研究实习生
                     </div>
-                    <div class="experience-description" data-en="Working under the supervision of Associate Professor Hou Qibin on computer vision and semi-supervised learning research, focusing on depth estimation and its downstream applications." 
-                         data-zh="在侯淇彬副教授的指导下进行计算机视觉和半监督学习研究，专注于深度估计及其下游应用。">
-                        在侯淇彬副教授的指导下进行计算机视觉和半监督学习研究，专注于深度估计及其下游应用。
+                    <div class="experience-description" data-en="Working under the supervision of Associate Professor Hou Qibin on computer vision and semi-supervised learning research, focusing on depth estimation and VLM." 
+                         data-zh="在侯淇彬副教授的指导下进行计算机视觉和半监督学习研究，研究方向：深度估计及其下游应用，视觉语言模型。">
+                        在侯淇彬副教授的指导下进行计算机视觉和半监督学习研究，研究方向：深度估计及其下游应用，视觉语言模型。
                     </div>
                 </div>
 
                 <div class="experience-item">
                     <div class="experience-header">
-                        <div class="experience-title">
-                            <a href="#" class="experience-org" data-en="DBIS Laboratory, Nankai University" data-zh="南开大学DBIS实验室">
-                                南开大学DBIS实验室
-                            </a>
-                            <span class="experience-period">2023/10 - <span data-en="2024/03" data-zh="2024/03">2024/03</span></span>
-                        </div>
-                        <div class="experience-location" data-en="Tianjin, China" data-zh="中国天津">中国天津</div>
+                        <a href="#" class="experience-org" data-en="DBIS Laboratory, Nankai University" data-zh="南开大学DBIS实验室">
+                            南开大学DBIS实验室
+                        </a>
+                        <span class="experience-period">2023/10 - <span data-en="2024/03" data-zh="2024/03">2024/03</span></span>
                     </div>
                     <div class="experience-role" data-en="Research Intern" data-zh="研究实习生">
-                        <strong>研究实习生</strong>
+                        研究实习生
                     </div>
                     <div class="experience-description" data-en="Working under the supervision of Associate Professor Song Chunyao on computer vision research" 
                          data-zh="在宋春瑶副教授的指导下进行计算机视觉研究">
                         在宋春瑶副教授的指导下进行计算机视觉研究
                     </div>
                 </div>
-
-
             </section>
-
 
             <!-- Education Section -->
             <section class="education">
@@ -317,21 +279,21 @@
                 
                 <div class="education-item">
                     <div class="education-header">
-                        <span class="education-degree" data-en="Bachelor of Engineering in Internet of Things Engineering" 
-                              data-zh="物联网工程专业工学学士">
-                            物联网工程专业工学学士
-                        </span>
+                        <span class="education-school" data-en="Nankai University" data-zh="南开大学">南开大学</span>
                         <span class="education-period">2023/09 - <span data-en="Present" data-zh="至今">至今</span></span>
                     </div>
-                    <div class="education-school" data-en="Nankai University" data-zh="南开大学">南开大学</div>
+                    <span class="education-degree" data-en="Bachelor of Engineering in Internet of Things Engineering" 
+                          data-zh="物联网工程专业工学学士">
+                        物联网工程专业工学学士
+                    </span>
                 </div>
 
                 <div class="education-item">
                     <div class="education-header">
-                        <span class="education-degree" data-en="High School Diploma" data-zh="高中毕业">高中毕业</span>
+                        <span class="education-school" data-en="Liaoning Experimental High School" data-zh="辽宁省实验中学">辽宁省实验中学</span>
                         <span class="education-period">2020/09 - 2023/08</span>
                     </div>
-                    <div class="education-school" data-en="Liaoning Experimental High School" data-zh="辽宁省实验中学">辽宁省实验中学</div>
+                    <span class="education-degree" data-en="High School Diploma" data-zh="高中毕业">高中毕业</span>
                 </div>
             </section>
 
@@ -340,20 +302,20 @@
                 <h2 class="section-title" data-en="Contact" data-zh="联系方式">联系方式</h2>
                 
                 <div class="contact-content">
-                    <p data-en="Feel free to reach out if you have any questions about academic research, mathematical modeling, or business collaboration opportunities. I typically respond within a few days." 
-                       data-zh="如果您对学术研究、数学建模或商业合作有任何问题，欢迎随时联系。我通常会在几天内回复。">
-                        如果您对学术研究、数学建模或商业合作有任何问题，欢迎随时联系。我通常会在几天内回复。
+                    <p data-en="Feel free to reach out if you have any questions about academic research, mathematical modeling, or business collaboration opportunities." 
+                       data-zh="如果您对学术研究、数学建模或商业合作有任何问题，欢迎随时联系。">
+                        如果您对学术研究、数学建模或商业合作有任何问题，欢迎随时联系。
                     </p>
                     
-                    <p data-en="I can be contacted directly at jin_modi[AT]mail.nankai.edu.cn" 
-                       data-zh="可直接通过邮箱 jin_modi[AT]mail.nankai.edu.cn 联系我">
-                        可直接通过邮箱 jin_modi[AT]mail.nankai.edu.cn 联系我
+                    <p data-en="Email: jin_modi[AT]mail.nankai.edu.cn" 
+                       data-zh="邮箱: jin_modi[AT]mail.nankai.edu.cn">
+                        邮箱: jin_modi[AT]mail.nankai.edu.cn
                     </p>
                     
                     <div class="contact-social">
-                        <a href="./img/weixin.jpg" target="_blank" data-en="Find me on WeChat" data-zh="微信联系">微信联系</a>
-                        <span class="link-separator">/</span>
-                        <a href="./img/qq.jpg" target="_blank" data-en="Find me on QQ" data-zh="QQ联系">QQ联系</a>
+                        <a href="./img/weixin.jpg" target="_blank" data-en="WeChat" data-zh="微信">微信</a>
+                        /
+                        <a href="./img/qq.jpg" target="_blank" data-en="QQ" data-zh="QQ">QQ</a>
                     </div>
                 </div>
             </section>
@@ -374,153 +336,16 @@
         "affiliation": {
             "@type": "Organization",
             "name": "Nankai University",
-            "url": "https://www.nankai.edu.cn/",
-            "sameAs": [
-                "https://www.nankai.edu.cn/",
-                "https://en.wikipedia.org/wiki/Nankai_University"
-            ]
+            "url": "https://www.nankai.edu.cn/"
         },
-        "alumniOf": [
-            {
-                "@type": "EducationalOrganization",
-                "name": "Liaoning Experimental High School",
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressRegion": "Liaoning",
-                    "addressCountry": "CN"
-                }
-            }
-        ],
-        "email": "2312578@mail.nankai.edu.cn",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "email": "2312578@mail.nankai.edu.cn",
-            "contactType": "Academic"
-        },
-        "sameAs": [
-            "https://github.com/ghost233lism",
-            "https://ghost233lism.github.io/"
-        ],
-        "knowsAbout": [
-            {
-                "@type": "Thing",
-                "name": "Computer Vision",
-                "description": "Research in computer vision and image processing"
-            },
-            {
-                "@type": "Thing", 
-                "name": "Monocular Depth Estimation",
-                "description": "Specialized research in single camera depth estimation"
-            },
-            {
-                "@type": "Thing",
-                "name": "Mathematical Modeling",
-                "description": "Competition-level mathematical modeling and optimization"
-            },
-            {
-                "@type": "Thing",
-                "name": "Computer Science",
-                "description": "Undergraduate studies in computer science"
-            }
-        ],
-        "worksFor": {
-            "@type": "Organization",
-            "name": "VCIP Laboratory",
-            "description": "Visual Computing and Image Processing Laboratory",
-            "parentOrganization": {
-                "@type": "Organization",
-                "name": "Nankai University"
-            }
-        },
-        "memberOf": [
-            {
-                "@type": "Organization",
-                "name": "Nankai University Mathematical Modeling Federation",
-                "description": "First Vice President and Youth League Branch Secretary"
-            }
-        ],
-        "award": [
-            "MCM 2025 Finalist Award",
-            "Shenzhen Cup National Third Prize",
-            "IMMC 2022 Double Finalist Award"
-        ],
-        "hasOccupation": {
-            "@type": "Occupation",
-            "name": "Student Researcher",
-            "occupationLocation": {
-                "@type": "Place",
-                "name": "Tianjin, China"
-            }
-        },
-        "nationality": {
-            "@type": "Country",
-            "name": "China"
-        },
-        "birthPlace": {
-            "@type": "Place",
-            "name": "China"
-        },
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Tianjin",
-            "addressCountry": "CN"
-        }
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Jin Modi Academic Homepage",
-        "alternateName": "金莫迪学术主页",
-        "url": "https://ghost233lism.github.io/",
-        "description": "Jin Modi's personal academic website featuring research work, mathematical modeling projects, and professional information.",
-        "author": {
-            "@type": "Person",
-            "name": "Jin Modi"
-        },
-        "inLanguage": ["zh-CN", "en-US"],
-        "isAccessibleForFree": true,
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://ghost233lism.github.io/?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-        }
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Homepage",
-                "item": "https://ghost233lism.github.io/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Mathematical Modeling",
-                "item": "https://ghost233lism.github.io/mathematical-modeling.html"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "My Company",
-                "item": "https://ghost233lism.github.io/my-company.html"
-            }
-        ]
+        "email": "2312578@mail.nankai.edu.cn"
     }
     </script>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Jin Modi. All rights reserved. <span data-en="You are visitor No." data-zh="您是第">您是第</span><span id="visit-count">0</span><span data-en="th visitor" data-zh="个访问者">个访问者</span></p>
+            <p>&copy; 2025 Jin Modi. <span data-en="Visitor No." data-zh="第">第</span> <span id="visit-count">0</span> <span data-en="" data-zh="位访客">位访客</span></p>
         </div>
     </footer>
 

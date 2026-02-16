@@ -30,7 +30,7 @@
     --font-mono: 'SF Mono', Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
     
     /* Spacing */
-    --max-width: 960px; /* Standard academic width */
+    --max-width: 1200px; /* 页面内容区最大宽度 */
     --spacing-xs: 0.25rem;
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;

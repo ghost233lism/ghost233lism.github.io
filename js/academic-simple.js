@@ -4,7 +4,9 @@
 const CONFIG = {
     themeKey: 'theme',
     langKey: 'language',
-    visitCountKey: 'visitCount'
+    visitCountKey: 'visitCount',
+    githubStatsCacheKey: 'githubStats:v1',
+    githubStatsTimeout: 6000
 };
 
 // Theme Management
@@ -102,25 +104,85 @@ function initVisitCounter() {
     counterEl.textContent = count;
 }
 
-// GitHub Stats (Simple implementation)
-async function initGitHubStats() {
-    const statsElements = document.querySelectorAll('.github-stats[data-repo]');
-    
-    for (const el of statsElements) {
-        const repo = el.getAttribute('data-repo');
-        try {
-            const res = await fetch(`https://api.github.com/repos/${repo}`);
-            if (res.ok) {
-                const data = await res.json();
-                const starsEl = el.querySelector('[data-type="stars"]');
-                const forksEl = el.querySelector('[data-type="forks"]');
-                if (starsEl) starsEl.textContent = data.stargazers_count;
-                if (forksEl) forksEl.textContent = data.forks_count;
-            }
-        } catch (e) {
-            console.warn('Failed to load GitHub stats for', repo);
-        }
+function readGitHubStatsCache() {
+    try {
+        return JSON.parse(localStorage.getItem(CONFIG.githubStatsCacheKey)) || {};
+    } catch (e) {
+        return {};
     }
+}
+
+function writeGitHubStatsCache(cache) {
+    try {
+        localStorage.setItem(CONFIG.githubStatsCacheKey, JSON.stringify(cache));
+    } catch (e) {
+        // Stats still work when storage is disabled (for example, in private mode).
+    }
+}
+
+function renderGitHubStats(el, stats) {
+    if (!stats || !Number.isFinite(stats.stars) || !Number.isFinite(stats.forks)) return;
+
+    const starsEl = el.querySelector('[data-type="stars"]');
+    const forksEl = el.querySelector('[data-type="forks"]');
+    if (starsEl) starsEl.textContent = stats.stars.toLocaleString();
+    if (forksEl) forksEl.textContent = stats.forks.toLocaleString();
+}
+
+async function fetchJSON(url) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), CONFIG.githubStatsTimeout);
+
+    try {
+        const res = await fetch(url, { signal: controller.signal });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return await res.json();
+    } finally {
+        clearTimeout(timeout);
+    }
+}
+
+async function fetchStatsFromGitHub(repo) {
+    const data = await fetchJSON(`https://api.github.com/repos/${repo}`);
+    const stats = { stars: Number(data.stargazers_count), forks: Number(data.forks_count) };
+    if (!Number.isFinite(stats.stars) || !Number.isFinite(stats.forks)) throw new Error('Invalid GitHub response');
+    return stats;
+}
+
+async function fetchStatsFromShields(repo) {
+    const encodedRepo = repo.split('/').map(encodeURIComponent).join('/');
+    const [stars, forks] = await Promise.all([
+        fetchJSON(`https://img.shields.io/github/stars/${encodedRepo}.json`),
+        fetchJSON(`https://img.shields.io/github/forks/${encodedRepo}.json`)
+    ]);
+    const stats = { stars: Number(stars.value), forks: Number(forks.value) };
+    if (!Number.isFinite(stats.stars) || !Number.isFinite(stats.forks)) throw new Error('Invalid Shields response');
+    return stats;
+}
+
+// Render the last successful value immediately, then refresh from two independent
+// providers. Shields avoids GitHub's low anonymous API limit on shared IPs.
+async function loadGitHubStats(el, cache) {
+    const repo = el.getAttribute('data-repo');
+    renderGitHubStats(el, cache[repo]);
+
+    try {
+        const stats = await Promise.any([
+            fetchStatsFromGitHub(repo),
+            fetchStatsFromShields(repo)
+        ]);
+        renderGitHubStats(el, stats);
+        cache[repo] = { ...stats, updatedAt: Date.now() };
+        writeGitHubStatsCache(cache);
+    } catch (e) {
+        console.warn('Failed to refresh GitHub stats for', repo);
+    }
+}
+
+function initGitHubStats() {
+    const cache = readGitHubStatsCache();
+    const statsElements = document.querySelectorAll('.github-stats[data-repo]');
+    return Promise.all(Array.from(statsElements, el => loadGitHubStats(el, cache)));
 }
 
 // Initialization

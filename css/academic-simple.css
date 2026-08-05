@@ -284,6 +284,70 @@ section {
     color: var(--text-primary);
 }
 
+/* Internship Section */
+.internship-card {
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.internship-logo-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    flex-shrink: 0;
+}
+
+.internship-logo {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.internship-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.internship-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.internship-company {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.internship-period {
+    flex-shrink: 0;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.internship-details {
+    display: grid;
+    gap: var(--spacing-xs);
+    color: var(--text-secondary);
+}
+
+.internship-details a {
+    color: var(--text-primary);
+    border-bottom: 1px dotted var(--text-muted);
+}
+
+.internship-details a:hover {
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+    text-decoration: none;
+}
+
 /* Publications Section */
 .author-notation {
     font-size: 0.85rem;
@@ -525,7 +589,22 @@ section {
         flex-direction: column;
         gap: var(--spacing-xs);
     }
-    
+
+    .internship-card {
+        flex-direction: column;
+    }
+
+    .internship-logo-wrap {
+        width: 220px;
+        max-width: 100%;
+    }
+
+    .internship-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+
     .experience-header,
     .education-header {
         flex-direction: column;

@@ -211,7 +211,7 @@ section {
     width: 200px;
     height: 200px; /* Smaller size to fit the head better in circular shape */
     object-fit: cover;
-    object-position: center 25%; /* Adjust vertical position to show head properly */
+    object-position: 40% 25%; /* Shift the crop to the right while keeping the head vertically framed */
     border-radius: 50%; /* Circular for modern academic look, or 4px for classic */
     box-shadow: var(--shadow-medium);
 }

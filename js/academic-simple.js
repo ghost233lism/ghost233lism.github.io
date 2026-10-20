@@ -86,11 +86,36 @@ function updatePageTitle(lang) {
     if (path.includes('mathematical-modeling')) {
         title = lang === 'en' ? 'Mathematical Modeling | Jin Modi' : '数学建模 | Jin Modi';
     } else if (path.includes('my-company')) {
-        title = lang === 'en' ? 'My Company | Jin Modi' : '我的公司 | Jin Modi';
+        title = lang === 'en' ? 'Shitu Xunjing | Jin Modi' : '识图寻境 | 金莫迪';
     } else {
         title = lang === 'en' ? 'Jin Modi - Personal Homepage' : 'Jin Modi | 金莫迪';
     }
     document.title = title;
+}
+
+// Keep five complete news items visible, including when text wraps or changes language.
+function initNewsScroll() {
+    const newsList = document.querySelector('.news-list');
+    if (!newsList) return;
+
+    const visibleItems = Array.from(newsList.children).slice(0, 5);
+    if (!visibleItems.length) return;
+
+    const updateHeight = () => {
+        const firstItem = visibleItems[0].getBoundingClientRect();
+        const lastItem = visibleItems[visibleItems.length - 1].getBoundingClientRect();
+        newsList.style.setProperty('--news-list-height', `${Math.ceil(lastItem.bottom - firstItem.top)}px`);
+    };
+
+    updateHeight();
+    if ('ResizeObserver' in window) {
+        const observer = new ResizeObserver(updateHeight);
+        visibleItems.forEach(item => observer.observe(item));
+    } else {
+        window.addEventListener('resize', updateHeight);
+        new MutationObserver(updateHeight).observe(newsList, { childList: true, subtree: true, characterData: true });
+        if (document.fonts) document.fonts.ready.then(updateHeight);
+    }
 }
 
 // Visit Counter
@@ -203,6 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (langBtn) langBtn.addEventListener('click', toggleLanguage);
     
     // 4. Other Features
+    initNewsScroll();
     initVisitCounter();
     initGitHubStats();
 });

@@ -76,11 +76,14 @@
                 
                 <div class="nav-controls">
                     <div class="nav-menu">
+                        <a href="index.html" class="nav-link" aria-current="page">
+                            <span data-en="Home" data-zh="首页">首页</span>
+                        </a>
                         <a href="mathematical-modeling.html" class="nav-link">
                             <span data-en="Mathematical Modeling" data-zh="数学建模">数学建模</span>
                         </a>
                         <a href="my-company.html" class="nav-link">
-                            <span data-en="My Company" data-zh="我的公司">我的公司</span>
+                            <span data-en="Shitu Xunjing" data-zh="识图寻境">识图寻境</span>
                         </a>
                     </div>
                     <div class="control-buttons">
@@ -112,9 +115,9 @@
                         </h2>
                         
                         <div class="profile-description">
-                            <p data-en="Jin Modi (金莫迪) is a third-year undergraduate student in Computer Science at Nankai University, currently interning at the VCIP Laboratory under the supervision of Professor <a href='https://mmcheng.net/' target='_blank' rel='noopener noreferrer'>Ming-Ming Cheng</a> and Associate Professor <a href='https://houqb.github.io/' target='_blank' rel='noopener noreferrer'>Qibin Hou</a>. He has also joined JD Explore Academy, where he conducts research on world models and video generation in collaboration with Dr. <a href='https://zhangxuying1004.github.io/' target='_blank' rel='noopener noreferrer'>Xuying Zhang</a>. His research interests include computer vision, world models and VLM."
-                               data-zh="金莫迪是南开大学密码和网络空间安全学院三年级本科生，目前在VCIP实验室实习，指导教师：<a href='https://mmcheng.net/' target='_blank' rel='noopener noreferrer'>程明明教授</a>和<a href='https://houqb.github.io/' target='_blank' rel='noopener noreferrer'>侯淇彬副教授</a>。此外，他已加入京东探索研究院，与<a href='https://zhangxuying1004.github.io/' target='_blank' rel='noopener noreferrer'>张旭迎博士</a>合作开展世界模型与视频生成相关研究。研究兴趣包括计算机视觉、世界模型和视觉语言模型。">
-                                金莫迪是南开大学密码和网络空间安全学院三年级本科生，目前在VCIP实验室实习，指导教师：<a href="https://mmcheng.net/" target="_blank" rel="noopener noreferrer">程明明教授</a>和<a href="https://houqb.github.io/" target="_blank" rel="noopener noreferrer">侯淇彬副教授</a>。此外，他已加入京东探索研究院，与<a href="https://zhangxuying1004.github.io/" target="_blank" rel="noopener noreferrer">张旭迎博士</a>合作开展世界模型与视频生成相关研究。研究兴趣包括计算机视觉、世界模型和视觉语言模型。
+                            <p data-en="Jin Modi (金莫迪) is a fourth-year undergraduate student in Computer Science at Nankai University, currently interning at the VCIP Laboratory under the supervision of Professor <a href='https://mmcheng.net/' target='_blank' rel='noopener noreferrer'>Ming-Ming Cheng</a> and Associate Professor <a href='https://houqb.github.io/' target='_blank' rel='noopener noreferrer'>Qibin Hou</a>. He has also joined JD Explore Academy, where he conducts research on world models and video generation in collaboration with Dr. <a href='https://zhangxuying1004.github.io/' target='_blank' rel='noopener noreferrer'>Xuying Zhang</a>. His research interests include computer vision, world models and VLM. He will pursue a Ph.D. under the supervision of Professor Ming-Ming Cheng."
+                               data-zh="金莫迪是南开大学密码和网络空间安全学院四年级本科生，目前在VCIP实验室实习，指导教师：<a href='https://mmcheng.net/' target='_blank' rel='noopener noreferrer'>程明明教授</a>和<a href='https://houqb.github.io/' target='_blank' rel='noopener noreferrer'>侯淇彬副教授</a>。此外，他已加入京东探索研究院，与<a href='https://zhangxuying1004.github.io/' target='_blank' rel='noopener noreferrer'>张旭迎博士</a>合作开展世界模型与视频生成相关研究。研究兴趣包括计算机视觉、世界模型和视觉语言模型。他将在程明明教授的指导下攻读博士学位。">
+                                金莫迪是南开大学密码和网络空间安全学院四年级本科生，目前在VCIP实验室实习，指导教师：<a href="https://mmcheng.net/" target="_blank" rel="noopener noreferrer">程明明教授</a>和<a href="https://houqb.github.io/" target="_blank" rel="noopener noreferrer">侯淇彬副教授</a>。此外，他已加入京东探索研究院，与<a href="https://zhangxuying1004.github.io/" target="_blank" rel="noopener noreferrer">张旭迎博士</a>合作开展世界模型与视频生成相关研究。研究兴趣包括计算机视觉、世界模型和视觉语言模型。他将在程明明教授的指导下攻读博士学位。
                             </p>
                         </div>
                         
@@ -141,8 +144,29 @@
 
             <!-- News Section -->
             <section class="news">
-                <h2 class="section-title" data-en="News" data-zh="最新动态">最新动态</h2>
-                <ul class="news-list">
+                <h2 class="section-title" id="news-title" data-en="News" data-zh="最新动态">最新动态</h2>
+                <ul class="news-list" tabindex="0" aria-labelledby="news-title">
+                    <li class="news-item">
+                        <span class="news-date">2026/10</span>
+                        <span class="news-content" data-en="🎉 Our project <a href='my-company.html'>Shitu Xunjing</a> won third place in Tianjin at the China International College Students’ Innovation Competition (2026)!"
+                              data-zh="🎉 <a href='my-company.html'>识图寻境</a>项目获得中国国际大学生创新大赛（2026）天津市季军！">
+                            🎉 <a href="my-company.html">识图寻境</a>项目获得中国国际大学生创新大赛（2026）天津市季军！
+                        </span>
+                    </li>
+                    <li class="news-item">
+                        <span class="news-date">2026/09</span>
+                        <span class="news-content" data-en="Submitted two papers to ICLR 2027."
+                              data-zh="向 ICLR 2027 投稿两篇论文。">
+                            向 ICLR 2027 投稿两篇论文。
+                        </span>
+                    </li>
+                    <li class="news-item">
+                        <span class="news-date">2026/09</span>
+                        <span class="news-content" data-en="🎉 Awarded the National Scholarship!"
+                              data-zh="🎉 获得国家奖学金！">
+                            🎉 获得国家奖学金！
+                        </span>
+                    </li>
                     <li class="news-item">
                         <span class="news-date">2026/08</span>
                         <span class="news-content" data-en="I have joined JD Explore Academy to conduct research on world models and video generation."

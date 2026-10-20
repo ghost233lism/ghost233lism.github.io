@@ -105,12 +105,16 @@
     align-items: center;
     gap: 1.5rem;
     padding: 1.25rem 1.5rem;
-    border-left: 3px solid var(--project-accent);
+    border-left: 3px solid transparent;
+}
+
+.project-highlight--featured {
+    border-left-color: var(--project-accent);
     background: var(--project-tint);
 }
 
 .project-highlight + .project-highlight {
-    border-top: 1px solid var(--bg-primary);
+    border-top: 1px solid var(--border-color);
 }
 
 .project-highlight time {
@@ -121,6 +125,11 @@
 .project-awards-grid time {
     font-family: var(--font-mono);
     font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.project-highlight--featured time,
+.project-awards-grid time {
     color: var(--project-accent);
 }
 

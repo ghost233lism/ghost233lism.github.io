@@ -85,8 +85,6 @@ function updatePageTitle(lang) {
     
     if (path.includes('mathematical-modeling')) {
         title = lang === 'en' ? 'Mathematical Modeling | Jin Modi' : '数学建模 | Jin Modi';
-    } else if (path.includes('my-company')) {
-        title = lang === 'en' ? 'Shitu Xunjing | Jin Modi' : '识图寻境 | 金莫迪';
     } else {
         title = lang === 'en' ? 'Jin Modi - Personal Homepage' : 'Jin Modi | 金莫迪';
     }

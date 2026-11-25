@@ -100,10 +100,6 @@
                             <i class="fas fa-calculator"></i>
                             <span data-en="Mathematical Modeling" data-zh="数学建模">数学建模</span>
                         </a>
-                        <a href="my-company.html" class="nav-link">
-                            <i class="fas fa-building"></i>
-                            <span data-en="My Company" data-zh="我的公司">我的公司</span>
-                        </a>
                     </div>
                     <div class="control-buttons">
                         <button class="control-btn" id="theme-toggle" title="Toggle Theme">
@@ -516,12 +512,6 @@
                 "position": 2,
                 "name": "Mathematical Modeling",
                 "item": "https://ghost233lism.github.io/mathematical-modeling.html"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "My Company",
-                "item": "https://ghost233lism.github.io/my-company.html"
             }
         ]
     }

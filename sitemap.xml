@@ -22,16 +22,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://ghost233lism.github.io/mathematical-modeling.html" />
   </url>
   
-  <!-- My Company Page -->
-  <url>
-    <loc>https://ghost233lism.github.io/my-company.html</loc>
-    <lastmod>2025-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://ghost233lism.github.io/my-company.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ghost233lism.github.io/my-company.html" />
-  </url>
-  
   <!-- Static Resources -->
   <url>
     <loc>https://ghost233lism.github.io/attaches/CV.pdf</loc>

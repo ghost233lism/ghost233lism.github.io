@@ -96,6 +96,10 @@ a:hover {
 }
 
 /* Container */
+.homepage {
+    --max-width: 84rem;
+}
+
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -385,7 +389,7 @@ section {
 
 .publication-media {
     flex-shrink: 0;
-    width: 220px;
+    width: clamp(10rem, calc(100% - 61rem), 220px);
     position: relative;
 }
 
@@ -432,13 +436,9 @@ section {
     }
 }
 
-.publication-summary {
-    color: var(--text-secondary);
-    margin-bottom: var(--spacing-sm);
-}
-
 .publication-content {
     flex: 1;
+    min-width: 0;
 }
 
 .publication-title {
@@ -460,6 +460,10 @@ section {
     font-size: 1rem;
     margin-bottom: var(--spacing-xs);
     color: var(--text-secondary);
+    white-space: nowrap;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
 }
 
 .publication-authors a {
@@ -620,6 +624,28 @@ section {
 }
 
 /* Responsive */
+@media (min-width: 769px) and (max-width: 74rem) {
+    .publication-item {
+        display: grid;
+        grid-template-columns: 10rem minmax(0, 1fr);
+        gap: var(--spacing-xs) var(--spacing-lg);
+    }
+
+    .publication-content {
+        display: contents;
+    }
+
+    .publication-title {
+        align-self: center;
+    }
+
+    .publication-authors,
+    .publication-venue-container,
+    .publication-links {
+        grid-column: 1 / -1;
+    }
+}
+
 @media (max-width: 768px) {
     .navbar {
         flex-wrap: wrap;

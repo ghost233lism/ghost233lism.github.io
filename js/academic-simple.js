@@ -71,6 +71,10 @@ function setLanguage(lang) {
 
     // Update page title
     updatePageTitle(lang);
+    document.querySelectorAll('.publication-preview').forEach(button => {
+        const title = button.closest('.publication-item').querySelector('.publication-title').textContent.trim();
+        button.setAttribute('aria-label', lang === 'en' ? 'Enlarge preview for ' + title : '放大论文预览：' + title);
+    });
 }
 
 function toggleLanguage() {
@@ -208,6 +212,117 @@ function initGitHubStats() {
     return Promise.all(Array.from(statsElements, el => loadGitHubStats(el, cache)));
 }
 
+function initPublicationPreviews() {
+    const mediaItems = document.querySelectorAll('.publication-media');
+    if (!mediaItems.length) return;
+
+    const header = document.querySelector('.header');
+    let expanded = null;
+
+    function closePreview() {
+        if (!expanded) return;
+        expanded.classList.remove('is-expanded');
+        expanded.querySelector('button').setAttribute('aria-expanded', 'false');
+        expanded = null;
+    }
+
+    function openPreview(media) {
+        if (expanded === media) return;
+        closePreview();
+        const box = media.getBoundingClientRect();
+        if (!box.width || !box.height) return;
+
+        const margin = 12;
+        const top = Math.max(0, header?.getBoundingClientRect().bottom || 0) + margin;
+        const width = document.documentElement.clientWidth;
+        const height = window.innerHeight;
+        const scale = Math.min(2.6, (width - margin * 2) / box.width, (height - top - margin) / box.height);
+        if (scale <= 1) return;
+
+        // Clamp the enlarged frame to the viewport without resizing the publication row.
+        const left = Math.max(margin, Math.min(box.left - box.width * (scale - 1) / 2, width - margin - box.width * scale));
+        const y = Math.max(top, Math.min(box.top - box.height * (scale - 1) / 2, height - margin - box.height * scale));
+        media.style.setProperty('--preview-x', (left - box.left) + 'px');
+        media.style.setProperty('--preview-y', (y - box.top) + 'px');
+        media.style.setProperty('--preview-scale', scale);
+        media.querySelector('button').setAttribute('aria-expanded', 'true');
+        media.classList.add('is-expanded');
+        expanded = media;
+    }
+
+    mediaItems.forEach(media => {
+        const asset = media.querySelector('.publication-image');
+        if (!asset) return;
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'publication-preview';
+        button.setAttribute('aria-expanded', 'false');
+        asset.replaceWith(button);
+        button.append(asset);
+
+        media.addEventListener('pointerenter', event => {
+            if (event.pointerType === 'mouse') openPreview(media);
+        });
+        media.addEventListener('pointerleave', event => {
+            if (event.pointerType === 'mouse' && expanded === media) closePreview();
+        });
+        button.addEventListener('focus', () => {
+            if (button.matches(':focus-visible')) openPreview(media);
+        });
+        button.addEventListener('blur', () => {
+            if (expanded === media) closePreview();
+        });
+        button.addEventListener('click', () => {
+            if (expanded === media) closePreview();
+            else openPreview(media);
+        });
+    });
+
+    document.addEventListener('pointerdown', event => {
+        if (expanded && !expanded.contains(event.target)) closePreview();
+    });
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') closePreview();
+    });
+    window.addEventListener('scroll', closePreview, { passive: true });
+    window.addEventListener('resize', closePreview);
+}
+
+function initPublicationVideos() {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    document.querySelectorAll('video.publication-image[data-src]').forEach(video => {
+        let inView = false;
+        let playRequested = false;
+
+        function updatePlayback() {
+            const allowAutoplay = !reducedMotion.matches && !navigator.connection?.saveData;
+            if (document.hidden || !inView || !(playRequested || allowAutoplay)) {
+                video.pause();
+                return;
+            }
+            if (!video.hasAttribute('src')) video.src = video.dataset.src;
+            video.play().catch(() => {}); // Browsers can require a tap to start inline playback.
+        }
+
+        video.closest('button').addEventListener('click', () => {
+            playRequested = true;
+            updatePlayback();
+        });
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver(([entry]) => {
+                inView = entry.isIntersecting;
+                updatePlayback();
+            });
+            observer.observe(video.closest('.publication-media'));
+        } else {
+            inView = true;
+            updatePlayback();
+        }
+        reducedMotion.addEventListener('change', updatePlayback);
+        document.addEventListener('visibilitychange', updatePlayback);
+    });
+}
+
 // Initialization
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Initialize Theme
@@ -216,7 +331,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 2. Initialize Language
     const savedLang = localStorage.getItem(CONFIG.langKey) || 'en';
+    initPublicationPreviews();
     setLanguage(savedLang);
+    initPublicationVideos();
     
     // 3. Bind Events
     const themeBtn = document.getElementById('theme-toggle');

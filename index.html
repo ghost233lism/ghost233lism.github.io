@@ -63,7 +63,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/academic-simple.css">
+    <link rel="stylesheet" href="./css/academic-simple.css?v=20261126">
 </head>
 <body>
     <!-- Header -->
@@ -256,11 +256,57 @@
             </section>
 
             <!-- Publications & Achievements Section -->
-            <section class="publications">
+            <section id="publications" class="publications">
                 <h2 class="section-title" data-en="Publications" data-zh="论文发表">论文发表</h2>
                 <p class="author-notation" data-en="* Equal contribution, † Corresponding author" data-zh="* 同等贡献，† 通讯作者">* 同等贡献，† 通讯作者</p>
                 
                 
+                <div class="publication-item">
+                    <div class="publication-media">
+                        <video class="publication-image"
+                               data-src="https://huggingface.co/datasets/ghost233lism/stateweaver-film-workshop-media/resolve/dd4482203e01a4c5759558f3f6d5a4801f461b33/demo/StateWeaver-EN-v5.mp4"
+                               poster="./img/stateweaver-preview.webp" muted loop playsinline preload="none"
+                               width="1920" height="1080" aria-label="StateWeaver English video preview"></video>
+                    </div>
+                    <div class="publication-content">
+                        <h3 class="publication-title" lang="en">
+                            <a href="https://arxiv.org/abs/2611.34290" target="_blank" rel="noopener noreferrer">StateWeaver: Multi-Agent Coordination of Story-State Transitions for Long-Horizon Video Generation</a>
+                        </h3>
+                        <p class="publication-authors">
+                            <a href="https://ghost233lism.github.io/">Modi Jin</a> ·
+                            <a href="https://zhangxuying1004.github.io/" target="_blank" rel="noopener noreferrer">Xuying Zhang</a> ·
+                            <a href="https://scholar.google.com/citations?user=EuOmru0AAAAJ" target="_blank" rel="noopener noreferrer">Yijing Guo</a> ·
+                            <a href="https://jahnsonblack.github.io/" target="_blank" rel="noopener noreferrer">Haoran Li</a> ·
+                            <a href="https://gelercat.com/" target="_blank" rel="noopener noreferrer">Yanwen Ma</a> ·
+                            <a href="https://openreview.net/profile?id=~Jing_Wang145" target="_blank" rel="noopener noreferrer">Jing Wang</a> ·
+                            <a href="https://openreview.net/profile?id=~Chenyu_Ge1" target="_blank" rel="noopener noreferrer">Chenyu Ge</a> ·
+                            <a href="https://mmcheng.net/cmm/" target="_blank" rel="noopener noreferrer">Ming-Ming Cheng</a> ·
+                            <a href="https://hhyhhyhy.github.io/" target="_blank" rel="noopener noreferrer">Haoyang Huang</a>
+                        </p>
+                        <div class="publication-venue-container">
+                            <p class="publication-venue" data-en="arXiv, November 2026" data-zh="arXiv，2026 年 11 月">arXiv，2026 年 11 月</p>
+                            <div class="github-stats" data-repo="ghost233lism/StateWeaver">
+                                <span class="github-stat">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                    <span class="stat-value" data-type="stars" aria-label="GitHub stars">-</span>
+                                </span>
+                                <span class="github-stat">
+                                    <i class="fas fa-code-branch" aria-hidden="true"></i>
+                                    <span class="stat-value" data-type="forks" aria-label="GitHub forks">-</span>
+                                </span>
+                            </div>
+                        </div>
+                        <p class="publication-summary"
+                           data-en="Active States turn continuity errors into targeted visual reference updates, and Hierarchical Collaboration lets later shots inherit verified changes to characters and props."
+                           data-zh="主动状态根据审核发现的连贯性问题更新视觉参考，层级化协作让后续镜头继承已经核验的角色与道具状态。">主动状态根据审核发现的连贯性问题更新视觉参考，层级化协作让后续镜头继承已经核验的角色与道具状态。</p>
+                        <div class="publication-links">
+                            <a href="https://arxiv.org/abs/2611.34290" class="publication-link" data-en="[Paper]" data-zh="[论文]">[论文]</a>
+                            <a href="https://github.com/ghost233lism/StateWeaver" class="publication-link" data-en="[Code]" data-zh="[代码]">[代码]</a>
+                            <a href="https://ghost233lism.github.io/StateWeaver-page/" class="publication-link" data-en="[Project]" data-zh="[项目]">[项目]</a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="publication-item">
                     <div class="publication-media">
                         <img src="./img/pipeline3.png" alt="GeoAgent: Learning to Geolocate Everywhere with Reinforced Geographic Characteristics" class="publication-image">
@@ -478,6 +524,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="./js/academic-simple.js"></script>
+    <script src="./js/academic-simple.js?v=20261126"></script>
 </body>
 </html>
